@@ -12,7 +12,7 @@
 
 #include "push_swap.h"
 
-int main(int argc, char **argv)
+struct stack_a *add_node(int argc, char **argv)
 {
 	stack_a *head;
 	stack_a *temp;
@@ -26,7 +26,7 @@ int main(int argc, char **argv)
 	{
 		stack_a *new;
 		new =(stack_a*)malloc(sizeof(stack_a));
-		new->val_a = atoi(argv[i]);
+		new->val_a = ft_atoi(argv[i]);
 		new->next = NULL;
 		if(temp == NULL)
 		{
@@ -46,6 +46,5 @@ int main(int argc, char **argv)
 		printf("%d\n", temp->val_a);
 		temp = temp->next;
 	}
-	return (0);
-
+	return (head);
 }

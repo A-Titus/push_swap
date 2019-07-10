@@ -31,7 +31,7 @@ typedef struct stack_b
 	struct stack_b *next;
 }stack_b;
 
-stack_a *add_node(int argc, char **argv);
+struct stack_a *add_node(int argc, char **argv);
 
 #endif
 
