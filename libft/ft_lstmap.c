@@ -1,40 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: atitus <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/10 14:02:56 by atitus            #+#    #+#             */
-/*   Updated: 2019/07/11 09:19:04 by atitus           ###   ########.fr       */
+/*   Created: 2019/07/11 09:25:19 by atitus            #+#    #+#             */
+/*   Updated: 2019/07/11 09:25:26 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "libft.h"
 
-#include "libft/libft.h"
-
-#include <stdio.h>
-#include <stdlib.h>
-
-typedef struct s_stacka
+t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	int val_a;
-	struct s_stacka *next;
-}t_stacka;
+	t_list *start;
+	t_list *node;
 
-
-typedef struct s_stackb
-{
-	int val_b;
-	struct s_stackb *next;
-}t_stackb;
-
-t_stacka *add_node(int argc, char **argv);
-
-#endif
-
-
-
-
+	if (!(lst))
+		return (NULL);
+	start = f(lst);
+	node = start;
+	lst = lst->next;
+	while (lst)
+	{
+		node->next = f(lst);
+		node = node->next;
+		lst = lst->next;
+	}
+	return (start);
+}

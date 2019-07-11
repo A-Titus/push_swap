@@ -6,16 +6,16 @@
 /*   By: atitus <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/10 14:02:11 by atitus            #+#    #+#             */
-/*   Updated: 2019/07/10 15:46:25 by atitus           ###   ########.fr       */
+/*   Updated: 2019/07/11 09:18:47 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-struct stack_a *add_node(int argc, char **argv)
+ t_stacka *add_node(int argc, char **argv)
 {
-	stack_a *head;
-	stack_a *temp;
+	t_stacka *head;
+	t_stacka *temp;
 	int i;
 
 	head = NULL;
@@ -24,8 +24,8 @@ struct stack_a *add_node(int argc, char **argv)
 
 	while (i < argc)
 	{
-		stack_a *new;
-		new =(stack_a*)malloc(sizeof(stack_a));
+		t_stacka *new;
+		new =(t_stacka*)malloc(sizeof(t_stacka));
 		new->val_a = ft_atoi(argv[i]);
 		new->next = NULL;
 		if(temp == NULL)
