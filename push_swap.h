@@ -6,7 +6,7 @@
 /*   By: atitus <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/10 14:02:56 by atitus            #+#    #+#             */
-/*   Updated: 2019/07/11 09:19:04 by atitus           ###   ########.fr       */
+/*   Updated: 2019/07/12 11:49:20 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ typedef struct s_stackb
 }t_stackb;
 
 t_stacka *add_node(int argc, char **argv);
+void	sa(t_stacka *node);
+void	print_list(t_stacka *node);
 
 #endif
 
