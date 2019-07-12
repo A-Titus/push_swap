@@ -6,7 +6,7 @@
 #    By: atitus <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/20 09:25:36 by atitus            #+#    #+#              #
-#    Updated: 2019/06/18 10:51:23 by atitus           ###   ########.fr        #
+#    Updated: 2019/07/12 15:48:08 by atitus           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -65,6 +65,13 @@ ft_isascii.c \
 ft_putchar_fd.c \
 ft_strdup.c \
 ft_strnequ.c \
+ft_lstaddend.c \
+ft_lstnew.c \
+ft_lstadd.c \
+ft_lstdelone.c \
+ft_lstdel.c \
+ft_lstiter.c \
+ft_lstmap.c \
 
 SRCO = ft_isdigit.o \
 	  ft_putendl.o \
@@ -119,6 +126,12 @@ ft_isascii.o \
 ft_putchar_fd.o \
 ft_strdup.o \
 ft_strnequ.o \
+ft_lstnew.o \
+ft_lstadd.o \
+ft_lstdelone.o \
+ft_lstdel.o \
+ft_lstiter.o \
+ft_lstmap.o \
 
 CFLAGS = -Wall -Werror -Wextra 
 
