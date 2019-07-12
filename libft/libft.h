@@ -6,7 +6,7 @@
 /*   By: atitus <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 09:17:20 by atitus            #+#    #+#             */
-/*   Updated: 2019/06/18 10:47:49 by atitus           ###   ########.fr       */
+/*   Updated: 2019/07/12 15:49:37 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,13 @@
 # include <stdlib.h>
 # include <string.h>
 # include <unistd.h>
+
+typedef struct		s_list
+{
+	void			*content;
+	size_t			content_size;
+	struct s_list	*next;
+}					t_list;
 
 void		ft_putchar(char c);
 void		ft_putstr(char const *s);
@@ -70,5 +77,12 @@ char		**ft_strsplit(char const *s, char c);
 char		*ft_strndup(const char *s, size_t n);
 char		*ft_strtrim(char const *s);
 size_t		ft_strlcat(char *dst, const char *src, size_t size);
+t_list		*ft_lstnew(void const *content, size_t content_size);
+t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+void		ft_lstadd(t_list **alst, t_list *new);
+void		ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
+void		ft_lstdel(t_list **alst, void (*del)(void *, size_t));
+void		ft_lstiter(t_list *lst, void (*f)(t_list *elem));
+void		ft_lstaddend(t_list **alst, t_list *new);
 
 #endif
