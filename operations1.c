@@ -6,19 +6,22 @@
 /*   By: atitus <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/11 09:19:53 by atitus            #+#    #+#             */
-/*   Updated: 2019/07/12 11:49:23 by atitus           ###   ########.fr       */
+/*   Updated: 2019/07/15 15:41:19 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	sa(t_stacka *head)
+void	sa(t_stack *a)
 {
+	t_stack *head;
+
+	head = a;
 	if (head == NULL || head->next == NULL)
 		exit (0);
-	t_stacka *p = NULL;
-	t_stacka *q = NULL;
-	t_stacka *r = NULL;
+	t_stack *p = NULL;
+	t_stack *q = NULL;
+	t_stack *r = NULL;
 
 	p = head;
 	q = head->next;
@@ -27,36 +30,68 @@ void	sa(t_stacka *head)
 	p->next = r;
 	head = q;
 	q->next = p;
+
+
+	while(head)
+	{
+		printf("%d\n",head->val);
+		head = head->next;
+	}
 }
 
-void	sb(t_stackb *head2)
+void	sb(t_stack *b)
 {
-	if (head2 == NULL || head2->next == NULL)
-		exit (0);
-	t_stacka *p = NULL;
-	t_stacka *q = NULL;
-	t_stacka *r = NULL;
+	t_stack *head;
 
-	p = head2;
-	q = head2->next;
-	r = head2->next->next;
+	head = b;
+	if (head == NULL || head->next == NULL)
+		exit (0);
+	t_stack *p = NULL;
+	t_stack *q = NULL;
+	t_stack *r = NULL;
+
+	p = head;
+	q = head->next;
+	r = head->next->next;
 	
 	p->next = r;
-	head2 = q;
+	head = q;
 	q->next = p;
+
+
+	while(head)
+	{
+		printf("%d\n",head->val);
+		head = head->next;
+	}
 }
 
-void	ss(t_stacka *head, t_stackb *head2)
+void	ss(t_stack *a, t_stack *b)
 {
-	sa(head);
-	sb(head2);
+	sa(a);
+	sb(b);
 }
 
-void	pa(t_stacka)
+void	pa(t_stack **a, int val)
 {
-	t_stackb *new;
-	new = (t_stackb*)malloc(sizeof(t_stackb));
-	new->val_b = 
+	 t_stack *newNode;
+	 
+	 newNode = (t_stack*)malloc(sizeof(t_stack));
+	 newNode->val = val;
+	 newNode->next = (*a);
+	 (*a) = newNode;
+
+	 // add code to pop from list
 }
 
+void	pb(t_stack **b, int val)
+{
+	 t_stack *newNode;
+	 
+	 newNode = (t_stack*)malloc(sizeof(t_stack));
+	 newNode->val = val;
+	 newNode->next = (*b);
+	 (*b) = newNode;
 
+	 //add code to pop from list
+}
