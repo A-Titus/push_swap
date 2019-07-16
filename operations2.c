@@ -14,15 +14,26 @@
 
 void    ra(t_stack *a)
 {
-    t_stack *head;
-    t_stack *tail;
+    rotate(&a, 1);
+}
 
-    if (a && a->next)
-    {
-        head = a->next;
-        tail = get_tail(a);
-        tail->next = a;
-        a->next = NULL;
-        a = head;
-    }
+void rotate(t_stack **head_ref, int k) 
+{ 
+       	if (k == 0)
+		return; 
+	t_stack	*current = *head_ref;
+	int count = 1; 
+	while (count < k && current != NULL) 
+	{ 
+		current = current->next;
+		count++; 
+	}
+	if (current == NULL)
+		return; 
+	t_stack *kthNode = current;
+	while (current->next != NULL) 
+		current = current->next; 
+	current->next = *head_ref; 
+	*head_ref = kthNode->next; 
+	kthNode->next = NULL; 
 }

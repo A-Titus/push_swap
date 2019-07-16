@@ -43,11 +43,11 @@
 		i++;
 	}
 	temp = head;
-	a = temp;
-	ra(head);
-//	pb(&b, &head, head->val);
-//	sb(b);
-//	pa(&a, &b, b->val);
+	a = temp; 					//figure out why it works with a only??????????????????
+	rotate(&a, 1);
+	pb(&b, &head, head->val);
+	sb(b);
+	pa(&a, &b, b->val);
 //	pa(&a, &b, b->val);
 printf("%s\n", "LIST B");
 	while(b)

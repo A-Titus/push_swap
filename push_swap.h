@@ -33,6 +33,7 @@ void	pb(t_stack **b, t_stack **a, int val);
 void	deleteNode(t_stack *node);
 void	deleteList(t_stack **headRef);
 t_stack	*get_tail(t_stack *stack);
+void	rotate(t_stack **head_ref, int k);
 void	ra(t_stack *a);
 
 #endif
