@@ -6,7 +6,7 @@
 /*   By: atitus <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/11 09:19:53 by atitus            #+#    #+#             */
-/*   Updated: 2019/07/15 15:41:19 by atitus           ###   ########.fr       */
+/*   Updated: 2019/07/16 11:57:47 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,13 +30,6 @@ void	sa(t_stack *a)
 	p->next = r;
 	head = q;
 	q->next = p;
-
-
-	while(head)
-	{
-		printf("%d\n",head->val);
-		head = head->next;
-	}
 }
 
 void	sb(t_stack *b)
@@ -57,13 +50,6 @@ void	sb(t_stack *b)
 	p->next = r;
 	head = q;
 	q->next = p;
-
-
-	while(head)
-	{
-		printf("%d\n",head->val);
-		head = head->next;
-	}
 }
 
 void	ss(t_stack *a, t_stack *b)
@@ -72,7 +58,7 @@ void	ss(t_stack *a, t_stack *b)
 	sb(b);
 }
 
-void	pa(t_stack **a, int val)
+void	pa(t_stack **a, t_stack **b, int val)
 {
 	 t_stack *newNode;
 	 
@@ -80,11 +66,12 @@ void	pa(t_stack **a, int val)
 	 newNode->val = val;
 	 newNode->next = (*a);
 	 (*a) = newNode;
-
-	 // add code to pop from list
+	 deleteNode(*b);
+	 // fix segfault when deleting last node;
+	 // do error checking;
 }
 
-void	pb(t_stack **b, int val)
+void	pb(t_stack **b, t_stack **a, int val)
 {
 	 t_stack *newNode;
 	 
@@ -92,6 +79,8 @@ void	pb(t_stack **b, int val)
 	 newNode->val = val;
 	 newNode->next = (*b);
 	 (*b) = newNode;
+	 deleteNode(*a);
 
-	 //add code to pop from list
+	 //fix segfaultlt when deleting last node;
+	 //do error chexking;
 }
