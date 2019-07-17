@@ -6,7 +6,7 @@
 /*   By: atitus <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/10 14:02:11 by atitus            #+#    #+#             */
-/*   Updated: 2019/07/16 12:02:47 by atitus           ###   ########.fr       */
+/*   Updated: 2019/07/17 10:30:10 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,10 +44,15 @@
 	}
 	temp = head;
 	a = temp; 					//figure out why it works with a only??????????????????
-	rotate(&a, 1);
-	pb(&b, &head, head->val);
-	sb(b);
-	pa(&a, &b, b->val);
+//	pb(&b, &a, a->val);
+//	pb(&b, &a, a->val);
+	sa(a);
+//	rra(&a);
+//	rrb(&b);
+//	rrr(&a,&b);
+//	rb(&b, 1);
+//	sb(b);
+//	pa(&a, &b, b->val);
 //	pa(&a, &b, b->val);
 printf("%s\n", "LIST B");
 	while(b)

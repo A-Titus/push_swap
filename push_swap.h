@@ -6,7 +6,7 @@
 /*   By: atitus <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/10 14:02:56 by atitus            #+#    #+#             */
-/*   Updated: 2019/07/16 12:01:34 by atitus           ###   ########.fr       */
+/*   Updated: 2019/07/17 10:07:49 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,12 @@ void	pb(t_stack **b, t_stack **a, int val);
 void	deleteNode(t_stack *node);
 void	deleteList(t_stack **headRef);
 t_stack	*get_tail(t_stack *stack);
-void	rotate(t_stack **head_ref, int k);
-void	ra(t_stack *a);
+void	ra(t_stack **head_ref, int k);
+void	rb(t_stack **head_ref, int k);
+void	rr(t_stack **a_ref, t_stack **b_ref, int i);
+void	rra(t_stack **head_ref);
+void	rrb(t_stack **head_ref);
+void	rrr(t_stack **a_ref, t_stack **b_ref);
 
 #endif
 
