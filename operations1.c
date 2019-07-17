@@ -6,30 +6,36 @@
 /*   By: atitus <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/11 09:19:53 by atitus            #+#    #+#             */
-/*   Updated: 2019/07/17 10:30:46 by atitus           ###   ########.fr       */
+/*   Updated: 2019/07/17 15:07:25 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	sa(t_stack *a)
+void	sa(t_stack **a)
 {
-	t_stack *head;
+	t_stack **head;
 
-	head = a;
-	if (head == NULL || head->next == NULL)
+	*head = *a;
+	if (*head == NULL || (*head)->next == NULL)
 		exit (0);
 	t_stack *p = NULL;
 	t_stack *q = NULL;
 	t_stack *r = NULL;
 
-	p = head;
-	q = head->next;
-	r = head->next->next;
+	p = *head;
+	q = (*head)->next;
+	r = (*head)->next->next;
 	
 	p->next = r;
-	head = q;
+	*head = q;
 	q->next = p;
+
+/*	while(*head)
+	{
+		printf("%d\n", (*head)->val);
+		*head = (*head)->next;
+	}*/
 }
 
 void	sb(t_stack *b)
@@ -54,7 +60,7 @@ void	sb(t_stack *b)
 
 void	ss(t_stack *a, t_stack *b)
 {
-	sa(a);
+	sa(&a);
 	sb(b);
 }
 
@@ -68,7 +74,7 @@ void	pa(t_stack **a, t_stack **b, int val)
 	 (*a) = newNode;
 	 deleteNode(*b);
 	 // fix segfault when deleting last node;
-	 // do error checking;
+	 // do error checking;	 
 }
 
 void	pb(t_stack **b, t_stack **a, int val)

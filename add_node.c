@@ -6,7 +6,7 @@
 /*   By: atitus <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/10 14:02:11 by atitus            #+#    #+#             */
-/*   Updated: 2019/07/17 10:30:10 by atitus           ###   ########.fr       */
+/*   Updated: 2019/07/17 15:05:22 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,10 +43,14 @@
 		i++;
 	}
 	temp = head;
-	a = temp; 					//figure out why it works with a only??????????????????
+	a = temp;
+
+//	t_stack **ptr;
+	ra(&a, 1);	
 //	pb(&b, &a, a->val);
 //	pb(&b, &a, a->val);
-	sa(a);
+//	pb(&b, &a, a->val);
+//	sa(&a);
 //	rra(&a);
 //	rrb(&b);
 //	rrr(&a,&b);
@@ -62,6 +66,7 @@ printf("%s\n", "LIST B");
 	}
 
 printf("%s", "\n");
+
 
 printf("%s\n", "LIST A");
 	while(a)
