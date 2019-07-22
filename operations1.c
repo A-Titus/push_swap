@@ -6,7 +6,7 @@
 /*   By: atitus <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/11 09:19:53 by atitus            #+#    #+#             */
-/*   Updated: 2019/07/22 13:16:46 by atitus           ###   ########.fr       */
+/*   Updated: 2019/07/22 15:16:56 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
  
@@ -14,43 +14,33 @@
 
 void	sa(t_stack **a)
 {
-	t_stack **head;
-
-	*head = *a;
-	if (*head && (*head)->next)
+	if (*a && (*a)->next)
 	{
-		t_stack *p = NULL;
-		t_stack *q = NULL;
-		t_stack *r = NULL;
+		t_stack **head;
+		int first;
+		int second;
 
-		p = *head;
-		q = (*head)->next;
-		r = (*head)->next->next;
-	
-		p->next = r;
-		*head = q;
-		q->next = p;
+		*head = *a;
+		first = (*a)->val;
+		second = ((*a)->next)->val;
+		(*a)->val = second;
+		((*a)->next)->val = first;
 	}
-//	print_list(*head);
 }
+
 void	sb(t_stack **b)
 {
-	t_stack **head;
-
-	*head = *b;
-	if (*head && (*head)->next)
+	if (*b && (*b)->next)
 	{
-		t_stack *p = NULL;
-		t_stack *q = NULL;
-		t_stack *r = NULL;
+		t_stack **head;
+		int first;
+		int second;
 
-		p = *head;
-		q = (*head)->next;
-		r = (*head)->next->next;
-	
-		p->next = r;
-		*head = q;
-		q->next = p;
+		*head = *b;
+		first = (*b)->val;
+		second = ((*b)->next)->val;
+		(*b)->val = second;
+		((*b)->next)->val = first;
 	}
 }
 
