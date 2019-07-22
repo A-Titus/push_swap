@@ -6,7 +6,7 @@
 /*   By: atitus <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/10 14:02:11 by atitus            #+#    #+#             */
-/*   Updated: 2019/07/19 11:55:18 by atitus           ###   ########.fr       */
+/*   Updated: 2019/07/22 13:17:54 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,46 +42,10 @@
 		}
 		i++;
 	}
-	temp = head;
-	a = temp;
+	a = head;
 
-//	sa(a);
-//	t_stack **ptr;
-//	ra(&a, 1);	
-	pb(&b, &a, a->val);
-	pb(&b, &a, a->val);
-	pb(&b, &a, a->val);
-	pb(&b, &a, a->val);
-//	rra(&a);
-//	rrb(&b);
-//	rrr(&a,&b);
-//	rb(&b, 1);
-//	sb(b);
-	pa(&a, &b, b->val);
-	pa(&a, &b, b->val);
-	pa(&a, &b, b->val);
-	pa(&a, &b, b->val);
-
-
-	pb(&b, &a, a->val);
-	pb(&b, &a, a->val);
-	pb(&b, &a, a->val);
-	pb(&b, &a, a->val);
-printf("%s\n", "LIST B");
-	while(b)
-	{
-		printf("%d\n", b->val);
-		b = b->next;
-	}
-
-printf("%s", "\n");
-
-
+	sa(&a);
 printf("%s\n", "LIST A");
-	while(a)
-	{
-		printf("%d\n", a->val);
-		a = a->next;
-	}
+print_list(a);
 	return (a);
 }

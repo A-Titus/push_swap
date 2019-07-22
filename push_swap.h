@@ -6,7 +6,7 @@
 /*   By: atitus <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/10 14:02:56 by atitus            #+#    #+#             */
-/*   Updated: 2019/07/19 11:09:37 by atitus           ###   ########.fr       */
+/*   Updated: 2019/07/22 13:53:44 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,9 @@ typedef struct s_stack
 }t_stack;
 
 t_stack *add_node(int argc, char **argv);
-void	sa(t_stack *a);
-void	sb(t_stack *b);
-void	print_list(t_stack *node);
+void	sa(t_stack **a);
+void	sb(t_stack **b);
+void	print_list(t_stack *head);
 void 	pa(t_stack **a, t_stack **b, int val);
 void	pb(t_stack **b, t_stack **a, int val);
 void	deleteNode(t_stack *node);
@@ -39,6 +39,16 @@ void	rr(t_stack **a_ref, t_stack **b_ref, int i);
 void	rra(t_stack **head_ref);
 void	rrb(t_stack **head_ref);
 void	rrr(t_stack **a_ref, t_stack **b_ref);
+void	rev_rot_a(t_stack **a);
+void	rev_rot_b(t_stack **b);
+void	push_a(t_stack **a, t_stack **b, int val);
+void	push_b(t_stack **b, t_stack **a, int val);
+void	swap_a(t_stack **a);
+void	swap_b(t_stack **b);
+void	rotate_a(t_stack **a);
+void	rotate_b(t_stack **b);
+void	ss_p(t_stack **a , t_stack **b);
+
 
 #endif
 
