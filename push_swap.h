@@ -6,7 +6,7 @@
 /*   By: atitus <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/10 14:02:56 by atitus            #+#    #+#             */
-/*   Updated: 2019/07/22 13:53:44 by atitus           ###   ########.fr       */
+/*   Updated: 2019/07/22 14:15:02 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,16 +39,6 @@ void	rr(t_stack **a_ref, t_stack **b_ref, int i);
 void	rra(t_stack **head_ref);
 void	rrb(t_stack **head_ref);
 void	rrr(t_stack **a_ref, t_stack **b_ref);
-void	rev_rot_a(t_stack **a);
-void	rev_rot_b(t_stack **b);
-void	push_a(t_stack **a, t_stack **b, int val);
-void	push_b(t_stack **b, t_stack **a, int val);
-void	swap_a(t_stack **a);
-void	swap_b(t_stack **b);
-void	rotate_a(t_stack **a);
-void	rotate_b(t_stack **b);
-void	ss_p(t_stack **a , t_stack **b);
-
 
 #endif
 
