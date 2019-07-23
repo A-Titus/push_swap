@@ -6,7 +6,7 @@
 /*   By: atitus <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/11 09:19:53 by atitus            #+#    #+#             */
-/*   Updated: 2019/07/22 15:16:56 by atitus           ###   ########.fr       */
+/*   Updated: 2019/07/23 09:29:38 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
  
@@ -16,11 +16,11 @@ void	sa(t_stack **a)
 {
 	if (*a && (*a)->next)
 	{
-		t_stack **head;
 		int first;
 		int second;
+		t_stack *head;
 
-		*head = *a;
+		head = *a;
 		first = (*a)->val;
 		second = ((*a)->next)->val;
 		(*a)->val = second;
@@ -32,11 +32,11 @@ void	sb(t_stack **b)
 {
 	if (*b && (*b)->next)
 	{
-		t_stack **head;
+		t_stack *head;
 		int first;
 		int second;
 
-		*head = *b;
+		head = *b;
 		first = (*b)->val;
 		second = ((*b)->next)->val;
 		(*b)->val = second;
@@ -63,7 +63,6 @@ void	pa(t_stack **a, t_stack **b, int val)
 	 	deleteNode(*b);
 	 else
 	 	 *b = NULL;
-	 // fix segfault when deleting last node;
 	 // do error checking;
 }
 
@@ -79,7 +78,5 @@ void	pb(t_stack **b, t_stack **a, int val)
 	 	 deleteNode(*a);
 	 else
 	 	 *a = NULL;
-
-	 //fix segfaultlt when deleting last node;
 	 //do error chexking;
 }
