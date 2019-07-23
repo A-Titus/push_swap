@@ -6,7 +6,7 @@
 /*   By: atitus <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 09:17:20 by atitus            #+#    #+#             */
-/*   Updated: 2019/07/12 15:49:37 by atitus           ###   ########.fr       */
+/*   Updated: 2019/07/23 11:11:38 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,5 +84,6 @@ void		ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 void		ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void		ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 void		ft_lstaddend(t_list **alst, t_list *new);
+int			ft_list_size(t_list *head);
 
 #endif

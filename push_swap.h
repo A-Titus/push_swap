@@ -6,7 +6,7 @@
 /*   By: atitus <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/10 14:02:56 by atitus            #+#    #+#             */
-/*   Updated: 2019/07/22 14:27:23 by atitus           ###   ########.fr       */
+/*   Updated: 2019/07/23 14:01:51 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,9 @@ void	rr(t_stack **a_ref, t_stack **b_ref, int i);
 void	rra(t_stack **head_ref);
 void	rrb(t_stack **head_ref);
 void	rrr(t_stack **a_ref, t_stack **b_ref);
-void	swap_a(t_stack **a);
+void	simple_sort(t_stack *stack);
+void	sort_3(t_stack *head);
+void	sort_5(t_stack *head);
 
 #endif
 
