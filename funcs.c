@@ -6,7 +6,7 @@
 /*   By: atitus <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/16 11:45:19 by atitus            #+#    #+#             */
-/*   Updated: 2019/07/26 10:10:15 by atitus           ###   ########.fr       */
+/*   Updated: 2019/07/29 09:11:29 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,4 +56,25 @@ int	list_size(t_stack *head)
 		count++;
 	}
 	return (count);
+}
+
+
+int		is_sorted(t_stack *head)
+{
+	t_stack *nodePtr;
+    nodePtr = head;
+    int i;
+
+    if (!nodePtr)
+    	return 0;
+    i = nodePtr->val;
+    nodePtr = nodePtr->next;
+    while (nodePtr)
+    {
+        if(i > nodePtr->val)
+        	return -1;
+        i = nodePtr->val;
+        nodePtr = nodePtr->next;
+    }
+    return 1;
 }

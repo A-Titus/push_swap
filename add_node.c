@@ -6,7 +6,7 @@
 /*   By: atitus <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/10 14:02:11 by atitus            #+#    #+#             */
-/*   Updated: 2019/07/26 11:01:15 by atitus           ###   ########.fr       */
+/*   Updated: 2019/07/30 09:29:02 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,13 +43,5 @@
 		i++;
 	}
 	a = head;
-
-ft_putnbr(is_sorted(a));
-
-//printf("%s\n", "LIST A");
-//print_list(a);
-
-//printf("%s\n", "LIST B");
-//print_list(b);
 	return (a);
 }

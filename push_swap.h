@@ -6,7 +6,7 @@
 /*   By: atitus <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/10 14:02:56 by atitus            #+#    #+#             */
-/*   Updated: 2019/07/26 10:57:41 by atitus           ###   ########.fr       */
+/*   Updated: 2019/07/30 12:35:21 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,9 @@ typedef struct s_stack
 	struct s_stack *next;
 }t_stack;
 
+t_stack *a;
+
+
 t_stack *add_node(int argc, char **argv);
 void	sa(t_stack **a);
 void	sb(t_stack **b);
@@ -40,12 +43,14 @@ void	rra(t_stack **head_ref);
 void	rrb(t_stack **head_ref);
 void	rrr(t_stack **a_ref, t_stack **b_ref);
 void	simple_sort(t_stack *stack);
-void	sort_3(t_stack *head);
-void	sort_5(t_stack *head);
+void	sort_3(t_stack **head);
+void	sort_5(t_stack **head);
 int		max(t_stack *head);
 int		min(t_stack *head);
 int		list_size(t_stack *head);
 int	is_sorted(t_stack *head);
+void	sort_100(t_stack **head);
+
 
 #endif
 
