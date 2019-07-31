@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: atitus <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/10 14:02:56 by atitus            #+#    #+#             */
-/*   Updated: 2019/07/30 12:35:21 by atitus           ###   ########.fr       */
+/*   Updated: 2019/07/31 09:45:36 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ typedef struct s_stack
 }t_stack;
 
 t_stack *a;
+t_stack *b;
 
 
 t_stack *add_node(int argc, char **argv);
@@ -43,8 +44,8 @@ void	rra(t_stack **head_ref);
 void	rrb(t_stack **head_ref);
 void	rrr(t_stack **a_ref, t_stack **b_ref);
 void	simple_sort(t_stack *stack);
-void	sort_3(t_stack **head);
-void	sort_5(t_stack **head);
+void	sort_3(t_stack *head);
+void	sort_5(t_stack *head);
 int		max(t_stack *head);
 int		min(t_stack *head);
 int		list_size(t_stack *head);
