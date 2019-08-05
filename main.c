@@ -15,6 +15,12 @@ int main(int argc, char **argv)
 	{
 		if(is_sorted(a) != 1)
 			sort_5(a);
+	}else
+	{
+		//simple_sort(a);
+		printf("%d", find_median(a));
+		//print_list(a);
+		//sort_100(a);
 	}
 	return (0);
 }

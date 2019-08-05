@@ -6,7 +6,7 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/23 12:12:50 by atitus            #+#    #+#             */
-/*   Updated: 2019/08/02 15:13:38 by atitus           ###   ########.fr       */
+/*   Updated: 2019/08/05 14:15:26 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,11 +105,14 @@ void	sort_5(t_stack *head)
 	ft_putendl("pa");
 }
 
-sort_100(t_stack *head)
-{
+//void	sort_100(t_stack *head)
+//{
+	//t_stack *temp = head;
+	//find_median(temp);
+	//print_list(head);
 	//find median,
 	//push everything between to stack b;
-	//then sort and push.	
-}
+	//then sort and push.
+//}
 
 

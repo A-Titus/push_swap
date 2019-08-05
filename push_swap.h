@@ -6,7 +6,7 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/10 14:02:56 by atitus            #+#    #+#             */
-/*   Updated: 2019/07/31 09:45:36 by atitus           ###   ########.fr       */
+/*   Updated: 2019/08/05 12:12:40 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,9 @@ int		max(t_stack *head);
 int		min(t_stack *head);
 int		list_size(t_stack *head);
 int	is_sorted(t_stack *head);
-void	sort_100(t_stack **head);
+void	sort_100(t_stack *head);
+void    simple_sort(t_stack *head);
+int     find_median(t_stack *head);
 
 
 #endif
