@@ -17,10 +17,7 @@ int main(int argc, char **argv)
 			sort_5(a);
 	}else
 	{
-		//simple_sort(a);
-		printf("%d", find_median(a));
-		//print_list(a);
-		//sort_100(a);
+		find_median(a);
 	}
 	return (0);
 }
