@@ -6,7 +6,7 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/05 08:59:18 by atitus            #+#    #+#             */
-/*   Updated: 2019/08/06 13:49:47 by atitus           ###   ########.fr       */
+/*   Updated: 2019/08/06 14:39:11 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,10 +45,10 @@ int     find_median(t_stack *head)
 { 
     t_stack *temp = clone(head);
     simple_sort(temp);                
-    t_stack *ptr1 = head;
-    t_stack *ptr2 = head;
+    t_stack *ptr1 = temp;
+    t_stack *ptr2 = temp;
  
-    if (head!=NULL)
+    if (temp!=NULL)
     {
         while (ptr2 != NULL && ptr2->next != NULL)
         {
@@ -56,14 +56,8 @@ int     find_median(t_stack *head)
             ptr1 = ptr1->next;
         }
     }
-    printf("%d\n", ptr1->val);
-    ft_putendl("********");
-    print_list(temp);
-     ft_putendl("********");
-    print_list(head);
     return (ptr1->val);
 }
-
 
 t_stack   *clone(t_stack* list) 
 {

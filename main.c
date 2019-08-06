@@ -17,7 +17,7 @@ int main(int argc, char **argv)
 			sort_5(a);
 	}else
 	{
-		find_median(a);
+		sort_all(a);
 	}
 	return (0);
 }
