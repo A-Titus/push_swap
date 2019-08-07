@@ -6,7 +6,7 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/23 12:12:50 by atitus            #+#    #+#             */
-/*   Updated: 2019/08/06 15:33:01 by atitus           ###   ########.fr       */
+/*   Updated: 2019/08/07 09:55:17 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,25 +111,24 @@ void	sort_all(t_stack *head)
 	
 	t_stack *temp = head;
 	median = find_median(temp);
-	//printf("%d", min(temp));
-	while(temp && temp->val <= median)
+	//printf("%d\n", median);
+	ft_putendl("T*******");
+	print_list(temp);
+
+
+	while(list_size(temp) != 0)
 	{
-		if(temp->val == min(temp))
-		{
-			pb(&b, &a, a->val);
-			ft_putendl("pb");
-		}
-		else
-		{
-			rra(&a);
-			ft_putendl("rra");
-		}
+		pb(&b, &temp, temp->val);
 		temp = temp->next;
 	}
-	//print_list(a);
-	//ft_putendl("******");
-	//print_list(b);
+	temp = head;
+	ft_putendl("A*******");
+	print_list(a);
 
+	ft_putendl("B*******");
+	print_list(b);
+	
+	//print_list(b);
 	//*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*
 	//fix function, not pushing correct values(min values)
 	//fix while loop.
