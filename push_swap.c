@@ -6,7 +6,7 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/23 12:12:50 by atitus            #+#    #+#             */
-/*   Updated: 2019/08/13 15:25:47 by atitus           ###   ########.fr       */
+/*   Updated: 2019/08/13 15:30:45 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -147,4 +147,5 @@ void	sort_all(t_stack *head)
 /*push everything below the median to stack b.
 then everything below third qaurtile
 then everything above trird qaurtile.
+try to push min
 */
