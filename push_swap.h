@@ -6,7 +6,7 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/10 14:02:56 by atitus            #+#    #+#             */
-/*   Updated: 2019/08/06 14:41:07 by atitus           ###   ########.fr       */
+/*   Updated: 2019/08/13 14:55:02 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ t_stack *copy;
 
 
 t_stack *add_node(int argc, char **argv);
+t_stack	*get_tail(t_stack *stack);
+t_stack *clone(t_stack* list);
 void	sa(t_stack **a);
 void	sb(t_stack **b);
 void	print_list(t_stack *head);
@@ -37,7 +39,6 @@ void 	pa(t_stack **a, t_stack **b, int val);
 void	pb(t_stack **b, t_stack **a, int val);
 void	deleteNode(t_stack *node);
 void	deleteList(t_stack **headRef);
-t_stack	*get_tail(t_stack *stack);
 void	ra(t_stack **head_ref, int k);
 void	rb(t_stack **head_ref, int k);
 void	rr(t_stack **a_ref, t_stack **b_ref, int i);
@@ -54,6 +55,8 @@ int		is_sorted(t_stack *head);
 void	sort_all(t_stack *head);
 void    simple_sort(t_stack *head);
 int     find_median(t_stack *head);
-t_stack *clone(t_stack* list);
+int     find_q1(t_stack *head);
+int     find_q3(t_stack *head);
+int     medianlength(t_stack *head);
 
 #endif

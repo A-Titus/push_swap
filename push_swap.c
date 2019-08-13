@@ -6,7 +6,7 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/23 12:12:50 by atitus            #+#    #+#             */
-/*   Updated: 2019/08/07 09:55:17 by atitus           ###   ########.fr       */
+/*   Updated: 2019/08/13 15:25:47 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,31 +107,44 @@ void	sort_5(t_stack *head)
 
 void	sort_all(t_stack *head)
 {
-	int median;
-	
-	t_stack *temp = head;
-	median = find_median(temp);
-	//printf("%d\n", median);
-	ft_putendl("T*******");
-	print_list(temp);
+	t_stack *temp;
 
-
-	while(list_size(temp) != 0)
-	{
-		pb(&b, &temp, temp->val);
-		temp = temp->next;
-	}
 	temp = head;
-	ft_putendl("A*******");
-	print_list(a);
-
-	ft_putendl("B*******");
-	print_list(b);
+	int median = find_median(temp);
+	//int q1 = find_median(temp);
+	//int q3 = find_q3(temp);
+	//print_list(head);
+	int medlen = medianlength(temp);
+	int lstsize = 0;
 	
-	//print_list(b);
-	//*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*
-	//fix function, not pushing correct values(min values)
-	//fix while loop.
+	while(temp)//fix this loop
+	{
+		if(temp->val <= median)
+		{
+			pb(&b, &a, a->val);
+			ft_putendl("pb");
+		}
+		else if(temp->val > median)
+		{
+			if(temp->next->val <= median)
+			{
+				sa(&a);
+				ft_putendl("sa");
+			}
+			else
+			{
+				ra(&a, 1);
+				ft_putendl("ra");
+			}
+		}
+		lstsize++;
+	}
+	print_list(a);
+	ft_putendl("hhhhhhhhhh");
+	print_list(b);
 }
 
-
+/*push everything below the median to stack b.
+then everything below third qaurtile
+then everything above trird qaurtile.
+*/
