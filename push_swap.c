@@ -6,7 +6,7 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/23 12:12:50 by atitus            #+#    #+#             */
-/*   Updated: 2019/08/13 15:30:45 by atitus           ###   ########.fr       */
+/*   Updated: 2019/08/19 15:57:22 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,41 +106,41 @@ void	sort_5(t_stack *head)
 }
 
 void	sort_all(t_stack *head)
-{
-	t_stack *temp;
-
-	temp = head;
-	int median = find_median(temp);
-	//int q1 = find_median(temp);
-	//int q3 = find_q3(temp);
-	//print_list(head);
-	int medlen = medianlength(temp);
-	int lstsize = 0;
-	
-	while(temp)//fix this loop
+{	
+	t_stack *temp =head;
+//	int i = 0;
+//	int mediansize;
+	int med = find_median(head);   //correct val.
+//	int medlen = medianlength(head);
+	//printf("%d\n", med );
+//	int q1 = find_q1(head);
+//	int q3 = find_q3(head);
+	///////////////////////////////////////////////
+	//fix loop
+//	ft_putendl("---------LIST A--------");
+//	print_list(a);
+//	ft_putendl("---------LIST B--------");
+//	print_list(b);
+	ft_putendl("---------Instructions--------");
+	while(temp->val) //fix this loop
 	{
-		if(temp->val <= median)
+		//temp = head;
+		if(temp->val <= med)
 		{
+			temp = temp->next;
 			pb(&b, &a, a->val);
 			ft_putendl("pb");
 		}
-		else if(temp->val > median)
+		else
 		{
-			if(temp->next->val <= median)
-			{
-				sa(&a);
-				ft_putendl("sa");
-			}
-			else
-			{
-				ra(&a, 1);
-				ft_putendl("ra");
-			}
+			temp = temp->next;
+			rra(&a);
+			ft_putendl("rra");
 		}
-		lstsize++;
 	}
+	ft_putendl("---------LIST A--------");
 	print_list(a);
-	ft_putendl("hhhhhhhhhh");
+	ft_putendl("---------LIST B--------");
 	print_list(b);
 }
 
