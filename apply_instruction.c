@@ -6,7 +6,7 @@
 /*   By: atitus <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/26 16:24:23 by atitus            #+#    #+#             */
-/*   Updated: 2019/08/26 16:24:28 by atitus           ###   ########.fr       */
+/*   Updated: 2019/08/26 16:30:36 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,7 @@ void		apply_ins(t_stack *stack_a, t_stack *stack_b, char *line)
 	else if(ft_strcmp(line, "pb") == 0)
 		pb(&stack_b, &stack_a, stack_a->val);
 	else if(ft_strcmp(line, "ss") == 0)
-			//	ss(&stack_a, &stack_b);
-		return ;
+		ss(&stack_a, &stack_b);
 	else if(ft_strcmp(line, "rr") == 0)
 		rr(&stack_a, &stack_b, 1);
 	else if(ft_strcmp(line, "rrr") == 0)

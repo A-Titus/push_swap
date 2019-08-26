@@ -6,7 +6,7 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/10 14:02:56 by atitus            #+#    #+#             */
-/*   Updated: 2019/08/26 15:55:28 by atitus           ###   ########.fr       */
+/*   Updated: 2019/08/26 16:30:09 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ t_stack	*get_tail(t_stack *stack);
 t_stack *clone(t_stack* list);
 void	sa(t_stack **a);
 void	sb(t_stack **b);
+void	ss(t_stack **a, t_stack **b);
 void	print_list(t_stack *head);
 void 	pa(t_stack **a, t_stack **b, int val);
 void	pb(t_stack **b, t_stack **a, int val);
