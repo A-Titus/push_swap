@@ -120,6 +120,7 @@ ft_putchar_fd.o \
 ft_strdup.o \
 ft_strnequ.o \
 
+
 CFLAGS = -Wall -Werror -Wextra 
 
 HEADER = ./includes/

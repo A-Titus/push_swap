@@ -14,7 +14,7 @@
 # define PUSH_SWAP_H
 
 #include "libft/libft.h"
-#include "libft/get_next_line/get_next_line.c"
+//#include "libft/get_next_line/get_next_line.c"
 
 #include <stdio.h>
 #include <stdlib.h>

@@ -70,5 +70,8 @@ char		**ft_strsplit(char const *s, char c);
 char		*ft_strndup(const char *s, size_t n);
 char		*ft_strtrim(char const *s);
 size_t		ft_strlcat(char *dst, const char *src, size_t size);
+int             get_next_line(const int fd, char **line);
+static  int     readln(const int fd, char **str);
+static  void    addln(char **str, char **line); 
 
 #endif

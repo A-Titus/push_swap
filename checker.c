@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include  "libft/get_next_line/get_next_line.h"
+//#include  "libft/get_next_line/get_next_line.h"
 #include "libft/libft.h"
 #include "push_swap.h"
 
