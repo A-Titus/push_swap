@@ -1,12 +1,12 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
+#    makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: atitus <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/20 09:25:36 by atitus            #+#    #+#              #
-#    Updated: 2019/07/23 11:09:45 by atitus           ###   ########.fr        #
+#    Updated: 2019/06/18 10:51:23 by atitus           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -65,14 +65,6 @@ ft_isascii.c \
 ft_putchar_fd.c \
 ft_strdup.c \
 ft_strnequ.c \
-ft_lstaddend.c \
-ft_lstnew.c \
-ft_lstadd.c \
-ft_lstdelone.c \
-ft_lstdel.c \
-ft_lstiter.c \
-ft_lstmap.c \
-ft_list_size.c \
 
 SRCO = ft_isdigit.o \
 	  ft_putendl.o \
@@ -127,14 +119,6 @@ ft_isascii.o \
 ft_putchar_fd.o \
 ft_strdup.o \
 ft_strnequ.o \
-ft_lstnew.o \
-ft_lstadd.o \
-ft_lstaddend.o \
-ft_lstdelone.o \
-ft_lstdel.o \
-ft_lstiter.o \
-ft_lstmap.o \
-ft_list_size.o \
 
 CFLAGS = -Wall -Werror -Wextra 
 

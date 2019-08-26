@@ -6,7 +6,7 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/10 14:02:56 by atitus            #+#    #+#             */
-/*   Updated: 2019/08/13 14:55:02 by atitus           ###   ########.fr       */
+/*   Updated: 2019/08/26 15:55:28 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,16 @@
 # define PUSH_SWAP_H
 
 #include "libft/libft.h"
+#include "libft/get_next_line/get_next_line.c"
 
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct s_stack
+typedef struct 		s_stack
 {
-	int 	val;
+	int			 	val;
 	struct s_stack *next;
-}t_stack;
+}					t_stack;
 
 t_stack *a;
 t_stack *b;
@@ -58,5 +59,6 @@ int     find_median(t_stack *head);
 int     find_q1(t_stack *head);
 int     find_q3(t_stack *head);
 int     medianlength(t_stack *head);
+void	apply_ins(t_stack *stack_a, t_stack *stack_b, char *line);
 
 #endif
