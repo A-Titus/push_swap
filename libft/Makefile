@@ -1,12 +1,12 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    makefile                                           :+:      :+:    :+:    #
+#    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: atitus <marvin@42.fr>                      +#+  +:+       +#+         #
+#    By: atitus <atitus@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/20 09:25:36 by atitus            #+#    #+#              #
-#    Updated: 2019/06/18 10:51:23 by atitus           ###   ########.fr        #
+#    Updated: 2019/08/27 08:05:22 by atitus           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -65,6 +65,7 @@ ft_isascii.c \
 ft_putchar_fd.c \
 ft_strdup.c \
 ft_strnequ.c \
+get_next_line.c
 
 SRCO = ft_isdigit.o \
 	  ft_putendl.o \
@@ -119,7 +120,7 @@ ft_isascii.o \
 ft_putchar_fd.o \
 ft_strdup.o \
 ft_strnequ.o \
-
+get_next_line.o
 
 CFLAGS = -Wall -Werror -Wextra 
 
@@ -128,14 +129,14 @@ HEADER = ./includes/
 all: $(NAME)
 
 $(NAME):
-	gcc -c $(CFLAGS) $(SRC)
-	ar rc $(NAME) $(SRCO)
-	ranlib $(NAME)
+	@gcc -c $(CFLAGS) $(SRC)
+	@ar rc $(NAME) $(SRCO)
+	@ranlib $(NAME)
 
 clean:
-	/bin/rm -f $(SRCO)
+	@/bin/rm -f $(SRCO)
 
 fclean: clean
-	/bin/rm -f $(NAME)
+	@/bin/rm -f $(NAME)
 
 re : fclean all

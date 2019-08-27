@@ -1,25 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   test.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: atitus <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 14:24:41 by atitus            #+#    #+#             */
-/*   Updated: 2019/06/10 14:55:43 by atitus           ###   ########.fr       */
+/*   Created: 2019/08/27 15:27:31 by atitus            #+#    #+#             */
+/*   Updated: 2019/08/27 15:53:02 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "push_swap.h"
 
-int		ft_strcmp(const char *s1, const char *s2)
+/*void	apply_mult(t_stack *a, t_stack *b, char*str[])
 {
-	int i;
-
-	i = 0;
-	while (s1[i] == s2[i] && s1[i] != '\0' && s2[i] != '\0')
+	while(*str)
 	{
-		i++;
+		apply_ins()
 	}
-	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+}
+
+void		check_order(t_stack *a, t_stack *b)
+{
+	int nums[5];
+
+	(nums[0] = (a->val > a->next->val && a->next->val < a->next->next->val))
+		? ()  : ();
+
+	if(num[0])
+			
+}*/
+
+
+int			main(void)
+{
+	int a;
+
+	int b = 9;
+
+	a = ( b >= 5) ? write(1, "true\n", 7) : write(1 , "false\n", 6);
+	printf("%i", a);
+	return (0);
 }

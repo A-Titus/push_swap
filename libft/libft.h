@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: atitus <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 09:17:20 by atitus            #+#    #+#             */
-/*   Updated: 2019/06/18 10:47:49 by atitus           ###   ########.fr       */
+/*   Updated: 2019/08/27 07:49:46 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,8 +70,6 @@ char		**ft_strsplit(char const *s, char c);
 char		*ft_strndup(const char *s, size_t n);
 char		*ft_strtrim(char const *s);
 size_t		ft_strlcat(char *dst, const char *src, size_t size);
-int             get_next_line(const int fd, char **line);
-static  int     readln(const int fd, char **str);
-static  void    addln(char **str, char **line); 
+int			get_next_line(const int fd, char **line);
 
 #endif

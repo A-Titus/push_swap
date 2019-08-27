@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   checker.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: atitus <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/26 16:20:14 by atitus            #+#    #+#             */
-/*   Updated: 2019/08/26 16:24:49 by atitus           ###   ########.fr       */
+/*   Updated: 2019/08/27 09:03:41 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,11 @@ int			main(int argc, char **argv)
 	
 	line = NULL;
 
-	while (get_next_line(STDIN_FILENO, &line))
+	while (get_next_line(0, &line) == 1)
 	{
 		apply_ins(stack_a, stack_b, line);
 	}
-	if (is_sorted(stack_a) == 1)
+	if (is_sorted(stack_a) == 0)
 	{
 		ft_putendl("OK");
 	}

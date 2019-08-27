@@ -3,13 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   operations1.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: atitus <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/11 09:19:53 by atitus            #+#    #+#             */
-/*   Updated: 2019/08/26 14:23:19 by emanana          ###   ########.fr       */
+/*   Updated: 2019/08/27 07:44:39 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
- 
+
 #include "push_swap.h"
 
 void	sa(t_stack **a)
@@ -44,10 +44,10 @@ void	sb(t_stack **b)
 	}
 }
 
-void	ss(t_stack *a, t_stack *b)
+void	ss(t_stack **a, t_stack **b)
 {
-	sa(&a);
-	sb(&b);
+	sa(a);
+	sb(b);
 }
 
 void	pa(t_stack **a, t_stack **b, int val)
