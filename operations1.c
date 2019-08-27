@@ -18,9 +18,9 @@ void	sa(t_stack **a)
 	{
 		int first;
 		int second;
-		t_stack *head;
+	//	t_stack *head;
 
-		head = *a;
+	//	head = *a;
 		first = (*a)->val;
 		second = ((*a)->next)->val;
 		(*a)->val = second;
@@ -32,11 +32,11 @@ void	sb(t_stack **b)
 {
 	if (*b && (*b)->next)
 	{
-		t_stack *head;
+	//	t_stack *head;
 		int first;
 		int second;
 
-		head = *b;
+	//	head = *b;
 		first = (*b)->val;
 		second = ((*b)->next)->val;
 		(*b)->val = second;

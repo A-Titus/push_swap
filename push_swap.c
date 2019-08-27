@@ -147,56 +147,7 @@ void	sort_4(t_stack *head)
 
 
 }
-/*void    ft_sort_four(t_stack **stack_a, t_stack **stack_b)
-{	
+void	sort_all(t_stack *head)
+{
 	
-	int i = 0;
-	int mediansize;
-	int med = find_median(head);   //correct val.
-	int medlen = medianlength(head);
-	printf("%d\n", med );
-	int q1 = find_q1(head);
-	int q3 = find_q3(head);
-	///////////////////////////////////////////////
-	//fix loop
-	ft_putendl("---------LIST A--------");
-	print_list(a);
-	ft_putendl("---------LIST B--------");
-	print_list(b);
-	ft_putendl("---------Instructions--------");
-
-{*/
-/*
-    t_stack *current = NULL;
-    int median;
-    int size;
-    int i;
-​
-    current = *stack_a;
-    size = ft_list_size(stack_a);
-    i = 1;
-    median = ft_median(stack_a);
-    while(i <= (size))
-    {   current = *stack_a;
-        if(current->x < median)
-        {
-            ft_putstr("current = ");
-            ft_putnbr(current->x);
-            ft_putchar('\n');
-            ft_push_to_stack(stack_b, ft_pop(stack_a));
-        }
-        else
-            ft_rotate(stack_a);
-        i++;
-    }
 }
-	ft_putendl("---------LIST A--------");
-	print_list(a);
-	ft_putendl("---------LIST B--------");
-	print_list(b);
-}
-
-push everything below the median to stack b.
-then everything below third qaurtile
-then everything above trird qaurtile.
-try to push min */
