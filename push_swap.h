@@ -6,7 +6,7 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/10 14:02:56 by atitus            #+#    #+#             */
-/*   Updated: 2019/08/28 13:52:06 by atitus           ###   ########.fr       */
+/*   Updated: 2019/08/28 14:40:23 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,5 +62,6 @@ int     find_q1(t_stack *head);
 int     find_q3(t_stack *head);
 int     medianlength(t_stack *head);
 void	apply_ins(t_stack *stack_a, t_stack *stack_b, char *line);
+void    sort_5_rev(t_stack *head);
 
 #endif

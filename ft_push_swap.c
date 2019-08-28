@@ -6,7 +6,7 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/28 08:47:15 by atitus            #+#    #+#             */
-/*   Updated: 2019/08/28 13:56:10 by atitus           ###   ########.fr       */
+/*   Updated: 2019/08/28 15:52:54 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,10 +43,15 @@ void	push_swap(int argc, char **argv)
 		else
 		{
 			sort_all(&a,&b);
+
+				   sort_5_rev(b);
+			
+			/*ft_putendl("------");
 			print_list(a);
-			ft_putendl("----------------");
+			ft_putendl("------");
 			print_list(b);
-			return ;
+			ft_putendl("------");
+			*/  
 		}
 	}
 }
