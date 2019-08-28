@@ -6,7 +6,7 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/23 12:12:50 by atitus            #+#    #+#             */
-/*   Updated: 2019/08/27 11:57:08 by atitus           ###   ########.fr       */
+/*   Updated: 2019/08/28 13:55:39 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -147,7 +147,30 @@ void	sort_4(t_stack *head)
 
 
 }
-void	sort_all(t_stack *head)
+
+void        sort_all(t_stack **a, t_stack **b)
 {
+    t_stack *current = NULL;
+    int median;
+    int size;
+    int i;
 	
+    current = *a;
+    size = list_size(current);
+    i = 1;
+    median = find_median(current);
+	
+    while(i <= (size))
+    {   current = *a;
+        if(current->val < median)
+        {
+            pb(b, a, (*a)->val);
+			ft_putendl("pb");
+        }
+        else
+            ra(a, 1);
+			ft_putendl("ra");
+        i++;
+    }
+	//print_list(current);
 }
