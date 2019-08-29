@@ -6,7 +6,7 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/10 14:02:56 by atitus            #+#    #+#             */
-/*   Updated: 2019/08/28 14:40:23 by atitus           ###   ########.fr       */
+/*   Updated: 2019/08/29 11:55:31 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define PUSH_SWAP_H
 
 #include "libft/libft.h"
-//#include "libft/get_next_line/get_next_line.c"
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -27,8 +26,6 @@ typedef struct 		s_stack
 
 t_stack *a;
 t_stack *b;
-t_stack *copy;
-
 
 t_stack *add_node(int argc, char **argv);
 t_stack	*get_tail(t_stack *stack);
@@ -55,7 +52,9 @@ int		max(t_stack *head);
 int		min(t_stack *head);
 int		list_size(t_stack *head);
 int		is_sorted(t_stack *head);
-void		sort_all(t_stack **a, t_stack **b);
+void 	push_below_median(t_stack **a);
+void 	push_above_median(t_stack **a);
+void    push_sorted(t_stack **b);
 void    simple_sort(t_stack *head);
 int     find_median(t_stack *head);
 int     find_q1(t_stack *head);
