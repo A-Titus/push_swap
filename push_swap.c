@@ -6,7 +6,7 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/23 12:12:50 by atitus            #+#    #+#             */
-/*   Updated: 2019/08/29 11:46:48 by atitus           ###   ########.fr       */
+/*   Updated: 2019/08/29 12:45:22 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -188,7 +188,7 @@ void 	push_above_median(t_stack **a)
 		
 		while(i <= (size))
 		{   current = *a;
-			if(current->val > median)
+			if(current->val >= median)
 			{
 				pb(&b, a, (*a)->val);
 				ft_putendl("pb");
