@@ -168,8 +168,11 @@ void 	push_below_median(t_stack **a)
 				ft_putendl("pb");
 			}
 			else
+		       	{
+			
 				ra(a, 1);
 				ft_putendl("ra");
+			}
 			i++;
 		} 
 }
