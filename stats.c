@@ -6,7 +6,7 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/13 13:16:45 by atitus            #+#    #+#             */
-/*   Updated: 2019/08/19 14:08:26 by atitus           ###   ########.fr       */
+/*   Updated: 2019/08/30 14:59:30 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ int     find_median(t_stack *head)
     return (ptr1->val);
     deleteList(&temp);
 }
+
 
 int     find_q1(t_stack *head)
 {

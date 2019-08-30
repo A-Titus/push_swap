@@ -5,8 +5,8 @@ void	sort_all(t_stack **headRef)
     t_stack* head = *headRef; 
     t_stack* a; 
     t_stack* b; 
-	int length_a = 0;
-	int length_b = 0;
+//	int length_a = 0;
+//	int length_b = 0;
     int length = 0;
   
 
@@ -15,14 +15,20 @@ void	sort_all(t_stack **headRef)
     } 
   
 
-    split_nodes(head, &a, &b); 
-  
+  	length = list_size(head);
+	if (length % 2 == 0)
+	{
+		split_nodes(head, &a, &b);
+	} else
+	{
+		head = head->next;
+	}
 
    /*( sort_all(&a); 
     sort_all(&b);*/ 
   
-	length_a = list_size(a);
-	length_b = list_size(b);//???????????????????
+	//length_a = list_size(a);
+//	length_b = list_size(b);
 	length = list_size(head);
 		if(length == 2)
 		{
@@ -50,16 +56,16 @@ void	sort_all(t_stack **headRef)
 		}else if (length == 3)
 		{
 			if(is_sorted(b) != 1 )
-				sort_3(b);
+				sort_3_b(b);
 		}
 		else if(length == 4)
 		{
 			if(is_sorted(b) != 1)
-				sort_4(b);
+				sort_4_b(b);
 		}else if (length == 5)
 		{
 			if(is_sorted(b) != 1)
-				sort_5(b);
+				sort_5_b(b);
 		}
 
 		if (is_sorted(*headRef) != 1)
@@ -81,7 +87,7 @@ t_stack* sorted_merge(t_stack* a, t_stack* b)
   
     if (a->val <= b->val) { 
         result = a; 
-        result->next = sorted_merge(a->next, b); // take steps???
+        result->next = sorted_merge(a->next, b);
     } 
     else { 
         result = b; 

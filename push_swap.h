@@ -6,7 +6,7 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/10 14:02:56 by atitus            #+#    #+#             */
-/*   Updated: 2019/08/30 07:56:14 by atitus           ###   ########.fr       */
+/*   Updated: 2019/08/30 15:17:12 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,9 @@ void	simple_sort(t_stack *stack);
 void	sort_3(t_stack *head);
 void	sort_4(t_stack *head);
 void	sort_5(t_stack *head);
+void	sort_3_b(t_stack *head);
+void	sort_4_b(t_stack *head);
+void	sort_5_b(t_stack *head);
 int		max(t_stack *head);
 int		min(t_stack *head);
 int		list_size(t_stack *head);
