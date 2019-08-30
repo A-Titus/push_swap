@@ -6,7 +6,7 @@
 #    By: atitus <atitus@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/08/26 15:40:20 by atitus            #+#    #+#              #
-#    Updated: 2019/08/29 11:41:13 by atitus           ###   ########.fr        #
+#    Updated: 2019/08/30 07:57:07 by atitus           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,8 @@ SRC = add_node.c \
 	  stats.c\
 	  ft_push_swap.c \
 	  sort_5_rev.c \
-	  push_sorted.c
+	  push_sorted.c \
+	  sort.c
 
 
 SRCO = add_node.o \
@@ -45,7 +46,8 @@ SRCO = add_node.o \
 	  stats.o \
 	  ft_push_swap.o \
 	  sort_5_rev.o \
-	  push_sorted.o
+	  push_sorted.o \
+	  sort.o
 	  
 CFLAGS = -Wall -Werror -Wextra 
 

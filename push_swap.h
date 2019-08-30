@@ -6,7 +6,7 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/10 14:02:56 by atitus            #+#    #+#             */
-/*   Updated: 2019/08/29 11:55:31 by atitus           ###   ########.fr       */
+/*   Updated: 2019/08/30 07:56:14 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,9 @@ t_stack *b;
 t_stack *add_node(int argc, char **argv);
 t_stack	*get_tail(t_stack *stack);
 t_stack *clone(t_stack* list);
+void	sort_all(t_stack **headRef);
+void split_nodes(t_stack* source, t_stack** front_ref, t_stack** back_ref);
+t_stack* sorted_merge(t_stack* a, t_stack* b);
 void	sa(t_stack **a);
 void	sb(t_stack **b);
 void	ss(t_stack **a, t_stack **b);

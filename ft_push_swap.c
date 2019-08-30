@@ -6,7 +6,7 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/28 08:47:15 by atitus            #+#    #+#             */
-/*   Updated: 2019/08/29 12:45:34 by atitus           ###   ########.fr       */
+/*   Updated: 2019/08/30 08:01:42 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,15 +40,11 @@ void	push_swap(int argc, char **argv)
 			if(is_sorted(a) != 1)
 				sort_5(a);
 		}
-		else if(length <= 100)
+		else 
 		{
 			if(is_sorted(a) != 1)
 			{
-				push_above_median(&a);
-				push_sorted(&b);
-				push_below_median(&a);
-				push_sorted(&b);
-				
+				sort_all(&a);
 				
 				ft_putendl("------");
 				print_list(a);

@@ -7,6 +7,7 @@ void	sort_all(t_stack **headRef)
     t_stack* b; 
 	int length_a = 0;
 	int length_b = 0;
+    int length = 0;
   
 
     if ((head == NULL) || (head->next == NULL)) { 
@@ -20,9 +21,9 @@ void	sort_all(t_stack **headRef)
     sort_all(&a); 
     sort_all(&b); 
   
-	length_a = list_size(&a);
-	length_b = list_size(&b);//???????????????????
-		
+	length_a = list_size(a);
+	length_b = list_size(b);//???????????????????
+	length = list_size(head);
 		if(length == 2)
 		{
 			if(is_sorted(a) != 1)
@@ -50,7 +51,7 @@ t_stack* sorted_merge(t_stack* a, t_stack* b)
 { 
     t_stack* result = NULL; 
    
-    else if (b == NULL) 
+    if (b == NULL) 
         return (a); 
   
     if (a->val <= b->val) { 
@@ -79,8 +80,8 @@ void split_nodes(t_stack* source, t_stack** front_ref, t_stack** back_ref)
         } 
     } 
   
-    *frontRef = source; 
-    *backRef = slow->next; 
+    *front_ref = source; 
+    *back_ref = slow->next; 
     slow->next = NULL; 
 } 
 
