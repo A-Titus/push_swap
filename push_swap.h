@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
+/*   By: abdus-samad <abdus-samad@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/10 14:02:56 by atitus            #+#    #+#             */
-/*   Updated: 2019/08/30 15:17:12 by atitus           ###   ########.fr       */
+/*   Updated: 2019/09/01 13:21:51 by abdus-samad      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,15 +58,29 @@ int		max(t_stack *head);
 int		min(t_stack *head);
 int		list_size(t_stack *head);
 int		is_sorted(t_stack *head);
-void 	push_below_median(t_stack **a);
-void 	push_above_median(t_stack **a);
+void 	push_median(t_stack **a);
+void 	push_q3(t_stack **a);
+void 	push_q1(t_stack **a);
+void 	push_q2(t_stack **a);
+void 	push_q4(t_stack **a);
+void 	push_q5(t_stack **a);
+void 	push_q6(t_stack **a);
+void 	push_q7(t_stack **a);
+void 	push_q8(t_stack **a);
 void    push_sorted(t_stack **b);
 void    simple_sort(t_stack *head);
 int     find_median(t_stack *head);
 int     find_q1(t_stack *head);
+int     find_q2(t_stack *head);
 int     find_q3(t_stack *head);
+int     find_q4(t_stack *head);
+int     find_q5(t_stack *head);
+int     find_q6(t_stack *head);
+int     find_q7(t_stack *head);
 int     medianlength(t_stack *head);
 void	apply_ins(t_stack *stack_a, t_stack *stack_b, char *line);
-void    sort_5_rev(t_stack *head);
+void    sort_3_rev(t_stack **head);
+void	sort_100(t_stack **head);
+void	print_stats(t_stack *a); //
 
 #endif

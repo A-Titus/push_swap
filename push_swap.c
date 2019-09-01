@@ -148,28 +148,26 @@ void	sort_4(t_stack *head)
 
 }
 
-void 	push_below_median(t_stack **a)
+void 	push_q8(t_stack **a)
 {
     t_stack *current = NULL;
-    int median;
+	int q7;
     int size;
     int i;
 	
 		current = *a;
 		size = list_size(current);
 		i = 1;
-		median = find_median(current);
-		
+		q7 = find_q7(current);
 		while(i <= (size))
 		{   current = *a;
-			if(current->val < median)
+			if(current->val >= q7)
 			{
 				pb(&b, a, (*a)->val);
 				ft_putendl("pb");
 			}
 			else
-		       	{
-			
+			{
 				ra(a, 1);
 				ft_putendl("ra");
 			}
@@ -177,21 +175,194 @@ void 	push_below_median(t_stack **a)
 		} 
 }
 
-void 	push_above_median(t_stack **a)
+void 	push_q7(t_stack **a)
 {
     t_stack *current = NULL;
-    int median;
+	int q7;
+	int q6;
     int size;
     int i;
 	
 		current = *a;
 		size = list_size(current);
 		i = 1;
-		median = find_median(current);
-		
+		q6 = find_q6(current);
+		q7 = find_q7(current);
 		while(i <= (size))
 		{   current = *a;
-			if(current->val >= median)
+			if(current->val > q6 && current->val < q7)
+			{
+				pb(&b, a, (*a)->val);
+				ft_putendl("pb");
+			}
+			else
+			{
+				ra(a, 1);
+				ft_putendl("ra");
+			}
+			i++;
+		} 
+}
+
+void 	push_q6(t_stack **a)
+{
+    t_stack *current = NULL;
+	int q5;
+	int q6;
+    int size;
+    int i;
+	
+		current = *a;
+		size = list_size(current);
+		i = 1;
+		q6 = find_q6(current);
+		q5 = find_q5(current);
+		while(i <= (size))
+		{   current = *a;
+			if(current->val > q5 && current->val <= q6)
+			{
+				pb(&b, a, (*a)->val);
+				ft_putendl("pb");
+			}
+			else
+			{
+				ra(a, 1);
+				ft_putendl("ra");
+			}
+			i++;
+		} 
+}
+void 	push_q5(t_stack **a)
+{
+    t_stack *current = NULL;
+	int q4;
+	//int q5;
+	
+    int size;
+    int i;
+	
+		current = *a;
+		size = list_size(current);
+		i = 1;
+		//q5 = find_q5(current);
+		q4 = find_q4(current);
+		while(i <= (size))
+		{   current = *a;
+			if(current->val > q4 )//&& current->val <= q5)
+			{
+				pb(&b, a, (*a)->val);
+				ft_putendl("pb");
+			}
+			else
+			{
+				ra(a, 1);
+				ft_putendl("ra");
+			}
+			i++;
+		} 
+}
+
+void 	push_q4(t_stack **a)
+{
+    t_stack *current = NULL;
+//	int q4;
+	int q3;
+    int size;
+    int i;
+	
+		current = *a;
+		size = list_size(current);
+		i = 1;
+		q3 = find_q3(current);
+		//q4 = find_q4(current);
+		while(i <= (size))
+		{   current = *a;
+			if(current->val > q3)
+			{
+				pb(&b, a, (*a)->val);
+				ft_putendl("pb");
+			}
+			else
+			{
+				ra(a, 1);
+				ft_putendl("ra");
+			}
+			i++;
+		} 
+}
+
+void 	push_q3(t_stack **a)
+{
+    t_stack *current = NULL;
+	int q2;
+	int q3;
+    int size;
+    int i;
+	
+		current = *a;
+		size = list_size(current);
+		i = 1;
+		q2 = find_q2(current);
+		q3 = find_q3(current);
+		while(i <= (size))
+		{   current = *a;
+			if(current->val >= q2 && current->val <= q3)
+			{
+				pb(&b, a, (*a)->val);
+				ft_putendl("pb");
+			}
+			else
+			{
+				ra(a, 1);
+				ft_putendl("ra");
+			}
+			i++;
+		} 
+}
+
+void 	push_q2(t_stack **a)
+{
+    t_stack *current = NULL;
+	int q2;
+	int q1;
+    int size;
+    int i;
+	
+		current = *a;
+		size = list_size(current);
+		i = 1;
+		q1 = find_q1(current);
+		q2 = find_q2(current);
+		while(i <= (size))
+		{   current = *a;
+			if(current->val >= q1 && current->val <= q2)
+			{
+				pb(&b, a, (*a)->val);
+				ft_putendl("pb");
+			}
+			else
+			{
+				ra(a, 1);
+				ft_putendl("ra");
+			}
+			i++;
+		} 
+}
+
+void 	push_q1(t_stack **a)
+{
+    t_stack *current = NULL;
+	int q1;
+    int size;
+    int i;
+	
+		current = *a;
+		size = list_size(current);
+		i = 1;
+		q1 = find_q1(current);
+		while(i <= (size))
+		{   current = *a;
+			if(current->val <= q1)
 			{
 				pb(&b, a, (*a)->val);
 				ft_putendl("pb");

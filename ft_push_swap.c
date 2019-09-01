@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_push_swap.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
+/*   By: abdus-samad <abdus-samad@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/28 08:47:15 by atitus            #+#    #+#             */
-/*   Updated: 2019/08/30 08:01:42 by atitus           ###   ########.fr       */
+/*   Updated: 2019/09/01 13:50:57 by abdus-samad      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,14 +44,33 @@ void	push_swap(int argc, char **argv)
 		{
 			if(is_sorted(a) != 1)
 			{
-				sort_all(&a);
+				/*push_q8(&a);
+				push_sorted(&b);
 				
-				ft_putendl("------");
+				push_q7(&a);
+				push_sorted(&b);
+				push_q6(&a);
+				push_sorted(&b);
+				
+				push_q5(&a);
+				push_sorted(&b);
+				*/
+				push_q4(&a);
+				push_sorted(&b);
+				push_q3(&a);
+				push_sorted(&b);
+				push_q2(&a);
+				push_sorted(&b);
+				push_q1(&a);
+				push_sorted(&b);
+				
+				
+				/*ft_putendl("------");
 				print_list(a);
 				ft_putendl("------");
 				print_list(b);
 				ft_putendl("------");
-				
+				*/
 			}
 			  
 		}
