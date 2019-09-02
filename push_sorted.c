@@ -6,7 +6,7 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/29 11:36:50 by atitus            #+#    #+#             */
-/*   Updated: 2019/08/29 12:22:31 by atitus           ###   ########.fr       */
+/*   Updated: 2019/09/02 12:37:07 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,15 +33,16 @@ void    push_sorted(t_stack **b)
             break ;
         }
         if(current->val == max_val)
-			{
-				pa(&a, b, (*b)->val);
-				ft_putendl("pa");
-			}
-			else
-			{
-				rb(b, 1);
-				ft_putendl("rb");
-			}
-            i++;
+		{
+			pa(&a, b, (*b)->val);
+			ft_putendl("pa");
+		}
+		else
+		{
+			
+            rrb(b);
+			ft_putendl("rb");
+		}
+        i++;
     }
 }

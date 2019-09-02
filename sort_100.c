@@ -1,19 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_5_rev.c                                       :+:      :+:    :+:   */
+/*   sort_100.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abdus-samad <abdus-samad@student.42.fr>    +#+  +:+       +#+        */
+/*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/28 14:24:33 by atitus            #+#    #+#             */
-/*   Updated: 2019/08/31 09:47:11 by abdus-samad      ###   ########.fr       */
+/*   Created: 2019/09/02 09:21:44 by atitus            #+#    #+#             */
+/*   Updated: 2019/09/02 13:43:01 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void    sort_3_rev(t_stack **head)
+void    sort_100(t_stack *head)
 {
-   sort_3_b(*head);
-  
+    head = a;
+    push_q4(&a);
+    push_sorted(&b);
+    
+    push_q3(&a);
+    push_sorted(&b);
+     push_q2(&a);
+    push_sorted(&b);
+    push_q1(&a);
+    push_sorted(&b);
+        
 }

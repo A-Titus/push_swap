@@ -3,16 +3,35 @@
 /*                                                        :::      ::::::::   */
 /*   ft_push_swap.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abdus-samad <abdus-samad@student.42.fr>    +#+  +:+       +#+        */
+/*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/28 08:47:15 by atitus            #+#    #+#             */
-/*   Updated: 2019/09/01 13:50:57 by abdus-samad      ###   ########.fr       */
+/*   Updated: 2019/09/02 13:47:32 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-
 #include "push_swap.h"
+
+/*static int    lt(int a, int b)
+{
+    return  (a  < b);
+}
+
+void    simplify(t_stack **head, int  (*cmp)(int a, int b))
+{
+    t_stack *a;
+
+    a = *head;
+    while (a)
+    {
+        if ((a->val > a->next->val && a->next->val < a->next->next->val) 
+                    && cmp(a->val, a->next->val ))
+        {
+           sa(&a);
+        }
+		a = a->next;
+    }
+}*/
 
 void	push_swap(int argc, char **argv)
 {
@@ -38,31 +57,17 @@ void	push_swap(int argc, char **argv)
 		}else if (length == 5)
 		{
 			if(is_sorted(a) != 1)
+			{
+				
 				sort_5(a);
+			}
 		}
 		else 
 		{
 			if(is_sorted(a) != 1)
 			{
-				/*push_q8(&a);
-				push_sorted(&b);
 				
-				push_q7(&a);
-				push_sorted(&b);
-				push_q6(&a);
-				push_sorted(&b);
-				
-				push_q5(&a);
-				push_sorted(&b);
-				*/
-				push_q4(&a);
-				push_sorted(&b);
-				push_q3(&a);
-				push_sorted(&b);
-				push_q2(&a);
-				push_sorted(&b);
-				push_q1(&a);
-				push_sorted(&b);
+				sort_500(a);
 				
 				
 				/*ft_putendl("------");
