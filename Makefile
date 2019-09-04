@@ -6,7 +6,7 @@
 #    By: atitus <atitus@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/08/26 15:40:20 by atitus            #+#    #+#              #
-#    Updated: 2019/09/02 10:17:29 by atitus           ###   ########.fr        #
+#    Updated: 2019/09/04 12:02:06 by atitus           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,14 +24,12 @@ SRC = add_node.c \
 	  operations3.c \
 	  print_list.c \
 	  push_swap.c \
-	  stats.c \
-	  stats_500.c \
+	  stats.c\
 	  ft_push_swap.c \
+	  sort_5_rev.c \
 	  push_sorted.c \
-	  sort_100.c \
-	  sort_500.c \
-	  push_500.c \
-	  push_100.c
+	  sort.c \
+	  push_100.c \
 	  
 
 
@@ -48,14 +46,13 @@ SRCO = add_node.o \
 	  print_list.o \
 	  push_swap.o \
 	  stats.o \
-	  stats_500.o \
 	  ft_push_swap.o \
+	  sort_5_rev.o \
 	  push_sorted.o \
-	  sort_100.o \
-	sort_500.o \
-	push_500.o \
-	push_100.o
-			  
+	  sort.o \
+	  push_100.o \
+
+	  
 CFLAGS = -Wall -Werror -Wextra 
 
 all: $(NAME)

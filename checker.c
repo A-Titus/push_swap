@@ -6,7 +6,7 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/26 16:20:14 by atitus            #+#    #+#             */
-/*   Updated: 2019/08/27 09:03:41 by atitus           ###   ########.fr       */
+/*   Updated: 2019/08/30 15:59:10 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int			main(int argc, char **argv)
 	{
 		apply_ins(stack_a, stack_b, line);
 	}
-	if (is_sorted(stack_a) == 0)
+	if (is_sorted(stack_a) == 1)
 	{
 		ft_putendl("OK");
 	}

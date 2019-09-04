@@ -2,6 +2,60 @@
 
 #include "push_swap.h"
 
-void	check_for_errors()
+int		check_dup(int argc, char **argv)
 {
+	int i;
+	int j;
+
+	i = 1;
+	while (i < argc - 1)
+	{
+		j = i + 1;
+		while (j < argc)
+		{
+			if (ft_atoi(argv[j]) == ft_atoi(argv[i]))
+				return (1);
+			j++;
+		}
+		i++;
+	}
+	return (0);
+}
+
+int		is_num(char *str)
+{
+	int i;
+
+	i = 0;
+	if (!ft_strlen(str))
+		return (0);
+	if (str[i] == '\0')
+		return (0);
+	if ((str[i] == '-' || str[i] == '+') && !ft_isdigit(str[i + 1]))
+		return (0);
+	if (str[i] == '-' || str[i] == '+')
+		i++;
+	while (str[i])
+	{
+		if (!ft_isdigit(str[i]))
+			return (0);
+		i++;
+	}
+	return (1);
+}
+
+int		valid(int argc, char **argv)
+{
+	int		i;
+
+	i = 1;
+	while (i < argc)
+	{
+		if (!is_num(argv[i]))
+			return (0);
+		i++;
+	}
+	if (check_dup(argc, argv))
+		return (0);
+	return (1);
 }

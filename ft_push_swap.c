@@ -6,32 +6,11 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/28 08:47:15 by atitus            #+#    #+#             */
-/*   Updated: 2019/09/02 13:47:32 by atitus           ###   ########.fr       */
+/*   Updated: 2019/09/04 11:44:42 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-/*static int    lt(int a, int b)
-{
-    return  (a  < b);
-}
-
-void    simplify(t_stack **head, int  (*cmp)(int a, int b))
-{
-    t_stack *a;
-
-    a = *head;
-    while (a)
-    {
-        if ((a->val > a->next->val && a->next->val < a->next->next->val) 
-                    && cmp(a->val, a->next->val ))
-        {
-           sa(&a);
-        }
-		a = a->next;
-    }
-}*/
 
 void	push_swap(int argc, char **argv)
 {
@@ -44,7 +23,11 @@ void	push_swap(int argc, char **argv)
 		if(length == 2)
 		{
 			if(is_sorted(a) != 1)
+			{
+				sa(&a);
 				ft_putendl("sa");
+			}
+			
 		}else if (length == 3)
 		{
 			if(is_sorted(a) != 1)
@@ -57,29 +40,47 @@ void	push_swap(int argc, char **argv)
 		}else if (length == 5)
 		{
 			if(is_sorted(a) != 1)
-			{
-				
 				sort_5(a);
-			}
 		}
 		else 
 		{
 			if(is_sorted(a) != 1)
-			{
-				
-				sort_500(a);
-				
-				
-				/*ft_putendl("------");
+			{				
+				push_above_q4(&a);
+				push_sorted(&b);
+				push_q4(&a);
+				push_sorted(&b);		
+				push_q3(&a);
+				push_sorted(&b);
+				push_median(&a);
+				push_sorted(&b);
+				push_q2(&a);
+				push_sorted(&b);
+				push_q1(&a);
+				push_sorted(&b);      ////problem in q1
+			}
+			
+		}
+			
+				ft_putendl("------");
 				print_list(a);
 				ft_putendl("------");
 				print_list(b);
 				ft_putendl("------");
-				*/
-			}
-			  
-		}
+				
 	}
+
+	if(is_sorted(a) == 1)
+				{
+					ft_putendl("Sorted");
+				}
+				else
+				{
+					ft_putendl(" NOT Sorted");
+				}
+				
+
+				
 }
 
 

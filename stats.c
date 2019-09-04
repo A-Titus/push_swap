@@ -6,212 +6,123 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/13 13:16:45 by atitus            #+#    #+#             */
-/*   Updated: 2019/09/02 13:44:51 by atitus           ###   ########.fr       */
+/*   Updated: 2019/09/03 11:51:36 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int     find_q1_100(t_stack *head)
-{
+int     find_median(t_stack *head)
+{ 
     t_stack *temp = clone(head);
-    simple_sort(temp);
-    int i = 0;
-    int length;
-    length = list_size(a);
-    length = length * 0.46;
-    
+    simple_sort(temp);                
     t_stack *ptr1 = temp;
-    if(temp)
+    t_stack *ptr2 = temp;
+ 
+    if (temp!=NULL)
     {
-        while(i <= length)
+        while (ptr2 != NULL && ptr2->next != NULL)
         {
+            ptr2 = ptr2->next->next;
             ptr1 = ptr1->next;
-            i++;
         }
     }
-    return (ptr1->val); 
+    return (ptr1->val);
     deleteList(&temp);
-    
 }
 
-int     find_q2_100(t_stack *head)
+int     find_q1(t_stack *head)
 {
     t_stack *temp = clone(head);
     simple_sort(temp);
-    int i = 0;
-    int length;
-    length = list_size(a);
-    length = length * 0.7;
-    
+    int   mark = find_q2(temp);
     t_stack *ptr1 = temp;
-    if(temp)
+    t_stack *ptr2 = temp;
+ 
+    if (temp != NULL)
     {
-        while(i <= length)
+        while (ptr2->val != mark  && ptr2->next->val != mark)
         {
+            ptr2 = ptr2->next->next;
             ptr1 = ptr1->next;
-            i++;
         }
     }
     return (ptr1->val); 
-    deleteList(&temp); 
+    deleteList(&temp);  
 }
 
-
-int     find_q3_100(t_stack *head)
+int     find_q2(t_stack *head)
 {
     t_stack *temp = clone(head);
     simple_sort(temp);
-    int i = 0;
-    int length;
-    length = list_size(a);
-    length = length * 0.85;
-    
+    int   mark = find_median(temp);
     t_stack *ptr1 = temp;
-    if(temp)
+    t_stack *ptr2 = temp;
+ 
+    if (temp != NULL)
     {
-        while(i <= length)
+        while (ptr2->val != mark  && ptr2->next->val != mark)
         {
+            ptr2 = ptr2->next->next;
             ptr1 = ptr1->next;
-            i++;
         }
     }
     return (ptr1->val); 
-    deleteList(&temp); 
+    deleteList(&temp);  
 }
 
-int     find_q4_100(t_stack *head)
+int     find_q3(t_stack *head)
 {
     t_stack *temp = clone(head);
     simple_sort(temp);
-    int i = 0;
-    int length;
-    length = list_size(a);
-    length = length * 0.8;
-    
+    int   mark = find_median(temp);
+    int q3 = find_q4(temp);
     t_stack *ptr1 = temp;
-    if(temp)
+    t_stack *ptr2 = temp;
+    
+    while(temp->val <= mark)
     {
-        while(i <= length)
+        ptr1 = ptr1 ->next;        
+        ptr2 = ptr2->next;
+        temp = temp->next;
+    }
+ 
+    temp = clone(head);
+    if (temp != NULL)
+    {
+        while (ptr2->val != q3  && ptr2->next->val != q3)
         {
+            ptr2 = ptr2->next->next;
             ptr1 = ptr1->next;
-            i++;
         }
     }
     return (ptr1->val); 
-    deleteList(&temp); 
+    deleteList(&temp);  
 }
-
-int     find_q5_100(t_stack *head)
+int     find_q4(t_stack *head)
 {
     t_stack *temp = clone(head);
     simple_sort(temp);
-    int i = 0;
-    int length;
-    length = list_size(a);
-    length = length * 0.5;
-    
+    int   mark = find_median(temp);
     t_stack *ptr1 = temp;
-    if(temp)
+    t_stack *ptr2 = temp;
+    
+    while(temp->val <= mark)
     {
-        while(i <= length)
+        ptr1 = ptr1 ->next;             
+        ptr2 = ptr2->next;
+        temp = temp->next;
+    }
+ 
+    temp = clone(head);
+    if (temp != NULL)
+    {
+        while (ptr2 != NULL  && ptr2->next != NULL)
         {
+            ptr2 = ptr2->next->next;
             ptr1 = ptr1->next;
-            i++;
         }
     }
     return (ptr1->val); 
-    deleteList(&temp); 
+    deleteList(&temp);  
 }
-
-int     find_q6_100(t_stack *head)
-{
-    t_stack *temp = clone(head);
-    simple_sort(temp);
-    int i = 0;
-    int length;
-    length = list_size(a);
-    length = length * 0.6;
-    
-    t_stack *ptr1 = temp;
-    if(temp)
-    {
-        while(i <= length)
-        {
-            ptr1 = ptr1->next;
-            i++;
-        }
-    }
-    return (ptr1->val); 
-    deleteList(&temp); 
-}
-
-int     find_q7_100(t_stack *head)
-{
-    t_stack *temp = clone(head);
-    simple_sort(temp);
-    int i = 0;
-    int length;
-    length = list_size(a);
-    length = length * 0.7;
-    
-    t_stack *ptr1 = temp;
-    if(temp)
-    {
-        while(i <= length)
-        {
-            ptr1 = ptr1->next;
-            i++;
-        }
-    }
-    return (ptr1->val); 
-    deleteList(&temp); 
-}
-int     find_q8_100(t_stack *head)
-{
-    t_stack *temp = clone(head);
-    simple_sort(temp);
-    int i = 0;
-    int length;
-    length = list_size(a);
-    length = length * 0.8;
-    
-    t_stack *ptr1 = temp;
-    if(temp)
-    {
-        while(i <= length)
-        {
-            ptr1 = ptr1->next;
-            i++;
-        }
-    }
-    return (ptr1->val); 
-    deleteList(&temp); 
-}
-int     find_q9_100(t_stack *head)
-{
-    t_stack *temp = clone(head);
-    simple_sort(temp);
-    int i = 0;
-    int length;
-    length = list_size(a);
-    length = length * 0.9;
-    
-    t_stack *ptr1 = temp;
-    if(temp)
-    {
-        while(i <= length)
-        {
-            ptr1 = ptr1->next;
-            i++;
-        }
-    }
-    return (ptr1->val); 
-    deleteList(&temp); 
-}
-
-//////////////////////////////////////////////
-
-
-
-
