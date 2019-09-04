@@ -6,7 +6,7 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/11 09:19:53 by atitus            #+#    #+#             */
-/*   Updated: 2019/08/27 07:44:39 by atitus           ###   ########.fr       */
+/*   Updated: 2019/09/04 13:58:42 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,16 @@ void	sa(t_stack **a)
 {
 	if (*a && (*a)->next)
 	{
-		int first;
-		int second;
-	//	t_stack *head;
+		 int first;
+		 int second;
 
-	//	head = *a;
-		first = (*a)->val;
-		second = ((*a)->next)->val;
-		(*a)->val = second;
-		((*a)->next)->val = first;
+		t_stack *head;
+
+		head = *a;
+		 first = (*a)->val;
+		 second = ((*a)->next)->val;
+		 (*a)->val = second;
+		 ((*a)->next)->val = first;
 	}
 }
 

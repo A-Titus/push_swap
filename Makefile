@@ -6,7 +6,7 @@
 #    By: atitus <atitus@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/08/26 15:40:20 by atitus            #+#    #+#              #
-#    Updated: 2019/09/04 12:02:06 by atitus           ###   ########.fr        #
+#    Updated: 2019/09/04 15:59:29 by atitus           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,6 +30,11 @@ SRC = add_node.c \
 	  push_sorted.c \
 	  sort.c \
 	  push_100.c \
+	  checks.c \
+	  checks2.c \
+	   tools.c \
+	  tools2.c 
+
 	  
 
 
@@ -51,6 +56,10 @@ SRCO = add_node.o \
 	  push_sorted.o \
 	  sort.o \
 	  push_100.o \
+	  checks.o \
+	  checks2.o \
+	  tools.o \
+	  tools2.o 
 
 	  
 CFLAGS = -Wall -Werror -Wextra 

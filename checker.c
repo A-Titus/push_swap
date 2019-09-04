@@ -5,35 +5,49 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/26 16:20:14 by atitus            #+#    #+#             */
-/*   Updated: 2019/08/30 15:59:10 by atitus           ###   ########.fr       */
+/*   Created: 2019/09/04 16:09:02 by atitus            #+#    #+#             */
+/*   Updated: 2019/09/04 16:09:03 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include  "libft/get_next_line/get_next_line.h"
-#include "libft/libft.h"
+
 #include "push_swap.h"
 
-int			main(int argc, char **argv)
+void	init(t_stack *a, t_stack *b, int *flags)
 {
-	t_stack *stack_a = add_node(argc, argv);
-	t_stack *stack_b = NULL;
+	ft_putendl("stack_a");
+	print(a, b, flags[1]);
+}
 
-	char *line;
-	
-	line = NULL;
+void	checker(t_stack *a, int *flags)
+{
+	t_stack	*b;
+	char	*inst;
 
-	while (get_next_line(0, &line) == 1)
+	b = NULL;
+	if (flags)
+		init(a, b, flags);
+	while (get_next_line(STDIN_FILENO, &inst) == 1)
 	{
-		apply_ins(stack_a, stack_b, line);
+		if (check_inst(inst))
+		{
+			apply_inst((t_stack **[]){&a, &b}, inst, flags, 0);
+			free(inst);
+			if (flags[0])
+				print(a, b, flags[1]);
+		}
+		else
+			error();
 	}
-	if (is_sorted(stack_a) == 1)
-	{
-		ft_putendl("OK");
-	}
+	if (check_win(a, b))
+		win();
 	else
-	{
-		ft_putendl("KO");
-	}
-	return (0);
+		ko();
+	destroy(&a);
+	destroy(&b);
+}
+
+int		main(int ac, char **av)
+{
+	return (process_cmd(ac, av, &checker));
 }

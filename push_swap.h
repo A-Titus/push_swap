@@ -6,13 +6,16 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/10 14:02:56 by atitus            #+#    #+#             */
-/*   Updated: 2019/09/04 11:18:43 by atitus           ###   ########.fr       */
+/*   Updated: 2019/09/04 16:03:57 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
+
+# define MAX_INT 2147483647
+# define MIN_INT -2147483648
 #include "libft/libft.h"
 
 #include <stdio.h>
@@ -67,8 +70,9 @@ int     find_median(t_stack *head);
 int     find_q1(t_stack *head);
 int     find_q3(t_stack *head);
 int     medianlength(t_stack *head);
-void	apply_ins(t_stack *stack_a, t_stack *stack_b, char *line);
+int	apply_ins(t_stack *stack_a, char *instr);
 void    sort_5_rev(t_stack *head);
+void	ft_swap(int *a, int *b);
 
 
 
@@ -80,6 +84,14 @@ void 	push_median(t_stack **head);
 void 	push_q1(t_stack **head);
 int     find_q4(t_stack *head);
 int     find_dist(t_stack *head);
-
 int     find_q2(t_stack *head);
+
+
+int	check_inst(char *s);
+int	check_duplicates(t_stack *s, int n);
+int	check_integer(char *s);
+void	ko(void);
+void	error(void);
+
+
 #endif
