@@ -15,9 +15,10 @@
 void 	sort_3(t_stack *head)
 {
 	t_stack	*temp;
-	
+
 	temp = head;
-	if(temp->val > temp->next->val && temp->val < temp->next->next->val){
+	if(temp->val > temp->next->val && temp->val < temp->next->next->val)
+	{
 		sa(&temp);
 		ft_putendl("sa");
 	}
@@ -46,8 +47,6 @@ void 	sort_3(t_stack *head)
 		ft_putendl("rra");
 	}
 }
-
-
 
 void	sort_5(t_stack *head)
 {

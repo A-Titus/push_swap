@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_sorted.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
+/*   By: abdus-samad <abdus-samad@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/29 11:36:50 by atitus            #+#    #+#             */
-/*   Updated: 2019/09/03 11:49:55 by atitus           ###   ########.fr       */
+/*   Updated: 2019/09/05 12:23:08 by abdus-samad      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,13 @@
 
 int     middle(t_stack *head)
 {
-    t_stack *slow_ptr = head;
-    t_stack *fast_ptr = head;
-    int i = 0;
+    t_stack *slow_ptr;
+    t_stack *fast_ptr;
+    int i;
+
+    slow_ptr = head;
+    fast_ptr = head;
+    i = 0;
 
     if (head!=NULL)
     {
@@ -31,7 +35,6 @@ int     middle(t_stack *head)
     return(i);
 }
 
-
 int     find_dist(t_stack *head)
 {
         int i = 0;
@@ -43,51 +46,51 @@ int     find_dist(t_stack *head)
             i++;
         }
 
-        while(temp)
+        while (temp)
         {
             temp = temp->next;
             j++;
         }
-        
+
         if (i < j)
             return(1);  
         else
             return (-1);
 }
 
-
 void    push_sorted(t_stack **b)
 {
     int size;
     int i;
     int middle_val;
-    t_stack *current = NULL;
+    t_stack *current;
     
+    current = NULL;
     middle_val = middle(*b);
     size = list_size(*b);
     i = 1;
-    
-    while(i > -1)
+ 
+    while (i > -1)
     {
         size = list_size(*b);
         current = *b;
         int max_val = max(*b);
         
-        if(size == 0)
+        if (size == 0)
         {
             i = -1;
             break ;
         }
-        if(current->val == max_val)
+        if (current->val == max_val)
 			{
 				pa(&a, b, (*b)->val);
 				ft_putendl("pa");
 			}
-            else if (find_dist(*b) == 1)
+        else if (find_dist(*b) == 1)
             {
                 rb(b,1);
 				ft_putendl("rb");
-            }else 
+            }else
             {
                 rrb(b);
 				ft_putendl("rrb");

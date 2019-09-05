@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   operations3.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
+/*   By: abdus-samad <abdus-samad@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/17 08:47:44 by atitus            #+#    #+#             */
-/*   Updated: 2019/09/05 16:15:47 by atitus           ###   ########.fr       */
+/*   Updated: 2019/09/05 12:12:10 by abdus-samad      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,40 +14,47 @@
 
 void rra(t_stack  **head_ref)
 {
+    t_stack *sec_last;
+    t_stack *last;
+
     if (*head_ref == NULL || (*head_ref)->next == NULL) 
     return ;
-    t_stack *secLast = NULL; 
-    t_stack *last = *head_ref; 
+   
+   sec_last = NULL;
+   last = *head_ref;
 
-    while (last->next != NULL) 
+    while (last->next != NULL)
     {
-        secLast = last;
+        sec_last = last;
         last = last->next;
     }
-    secLast->next = NULL;
+    sec_last->next = NULL;
     last->next = *head_ref;
-    *head_ref = last; 
+    *head_ref = last;
 }
 
 void rrb(t_stack  **head_ref)
 {
-    if (*head_ref == NULL || (*head_ref)->next == NULL) 
-        return; 
-    t_stack *secLast = NULL; 
-    t_stack *last = *head_ref; 
+    t_stack *sec_last;
+    t_stack *last;
 
-    while (last->next != NULL) 
-    { 
-        secLast = last; 
-        last = last->next; 
-    } 
-    secLast->next = NULL; 
-    last->next = *head_ref; 
-    *head_ref = last; 
+    if (*head_ref == NULL || (*head_ref)->next == NULL)
+        return ;
+    sec_last = NULL;
+    last = *head_ref;
+
+    while (last->next != NULL)
+    {
+        sec_last = last;
+        last = last->next;
+    }
+    sec_last->next = NULL;
+    last->next = *head_ref;
+    *head_ref = last;
 }
 
 void rrr(t_stack **a_ref, t_stack **b_ref)
 {
-	rra(a_ref);
+    rra(a_ref);
 	rrb(b_ref);
 }
