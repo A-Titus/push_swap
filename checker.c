@@ -6,7 +6,7 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 16:09:02 by atitus            #+#    #+#             */
-/*   Updated: 2019/09/05 10:43:37 by atitus           ###   ########.fr       */
+/*   Updated: 2019/09/05 16:00:38 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,5 +47,24 @@ void	checker(int argc, char **argv)
 
 int		main(int argc, char **argv)
 {
-	checker(argc, argv);
+	char **temp =NULL;
+	int i;
+	int j;
+
+	j = 0;
+	i = 1;
+	if (argc > 1)
+	{
+		if (argc == 2 && !argv[2])
+		{
+			i = 0;
+			temp = ft_strsplit(argv[1], ' ');
+			argv = temp;
+		}
+		//else
+		//	argv = removefirst(argv);
+		checker(argc, argv);
+	}
+	else
+		return(0);
 }
