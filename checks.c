@@ -3,36 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   checks.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
+/*   By: abdus-samad <abdus-samad@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 16:09:17 by atitus            #+#    #+#             */
-/*   Updated: 2019/09/05 11:46:29 by atitus           ###   ########.fr       */
+/*   Updated: 2019/09/05 11:55:11 by abdus-samad      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-int	check_integer(char *s)
-{
-	while (*s)
-	{
-		if (!(ft_isdigit(*s) || *s == '-'))
-			return (0);
-		s++;
-	}
-	return (1);
-}
-
-int	check_duplicates(t_stack *s, int n)
-{
-	while (s)
-	{
-		if (s->val == n)
-			return (0);
-		s = s->next;
-	}
-	return (1);
-}
 
 int	check_inst(char *s)
 {
@@ -51,4 +29,3 @@ int	check_inst(char *s)
 		return (1);
 	return (0);
 }
-

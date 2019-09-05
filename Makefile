@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: atitus <atitus@student.42.fr>              +#+  +:+       +#+         #
+#    By: abdus-samad <abdus-samad@student.42.fr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/08/26 15:40:20 by atitus            #+#    #+#              #
-#    Updated: 2019/09/05 08:49:57 by atitus           ###   ########.fr        #
+#    Updated: 2019/09/05 11:55:54 by abdus-samad      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,13 +26,10 @@ SRC = add_node.c \
 	  push_swap.c \
 	  stats.c\
 	  ft_push_swap.c \
-	  sort_5_rev.c \
 	  push_sorted.c \
-	  sort.c \
 	  push_100.c \
-	  checks.c \
-	  checks2.c \
-	  errors.c
+	  errors.c \
+	  checks.c
 
 	  
 
@@ -51,13 +48,10 @@ SRCO = add_node.o \
 	  push_swap.o \
 	  stats.o \
 	  ft_push_swap.o \
-	  sort_5_rev.o \
 	  push_sorted.o \
-	  sort.o \
 	  push_100.o \
-	  checks.o \
-	  checks2.o \
-	  errors.o
+	  errors.o \
+	  checks.o
 
 	  
 CFLAGS = -Wall -Werror -Wextra 

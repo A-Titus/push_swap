@@ -3,18 +3,45 @@
 /*                                                        :::      ::::::::   */
 /*   errors.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
+/*   By: abdus-samad <abdus-samad@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/05 08:39:22 by atitus            #+#    #+#             */
-/*   Updated: 2019/09/05 11:30:41 by atitus           ###   ########.fr       */
+/*   Updated: 2019/09/05 11:42:19 by abdus-samad      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+long long	ft_atoll(char *str)
+{
+	long long	i;
+	long long	sign;
+	long long	num;
+
+	i = 0;
+	sign = 1;
+	num = 0;
+	while ((str[i] >= '\t' && str[i] <= '\r') || (str[i] == ' '))
+		i++;
+	if (str[i] == '-')
+		sign = -1;
+	if (str[i] == '-' || str[i] == '+')
+		i++;
+	while (str[i] != '\0' && str[i] >= '0' && str[i] <= '9')
+	{
+		num = (num * 10) + (str[i] - 48);
+		i++;
+	}
+	return (num * sign);
+}
+
 int	check_size(long n)
 {
-	return (n < MAX_INT && n > MIN_INT);
+	if ((n < -2147483648) || (n > 2147483647))
+		return (1);
+	else
+		return(0);
+		
 }
 
 int		check_dup(int argc, char **argv)
@@ -80,6 +107,8 @@ int		valid(int argc, char **argv)
 	{
 		if (!is_num(argv[i]))
 			return (0);
+		if(check_size(ft_atoll(argv[i])))
+			return(0);
 		i++;
 	}
 	if (check_dup(argc, argv))
