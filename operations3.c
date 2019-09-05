@@ -6,36 +6,36 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/17 08:47:44 by atitus            #+#    #+#             */
-/*   Updated: 2019/09/04 13:59:05 by atitus           ###   ########.fr       */
+/*   Updated: 2019/09/05 16:15:47 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void rra(t_stack  **head_ref) 
-{   
+void rra(t_stack  **head_ref)
+{
     if (*head_ref == NULL || (*head_ref)->next == NULL) 
-        return; 
+    return ;
     t_stack *secLast = NULL; 
     t_stack *last = *head_ref; 
-  
+
     while (last->next != NULL) 
-    { 
-        secLast = last; 
-        last = last->next; 
-    } 
-    secLast->next = NULL; 
-    last->next = *head_ref; 
+    {
+        secLast = last;
+        last = last->next;
+    }
+    secLast->next = NULL;
+    last->next = *head_ref;
     *head_ref = last; 
 }
 
-void rrb(t_stack  **head_ref) 
-{   
+void rrb(t_stack  **head_ref)
+{
     if (*head_ref == NULL || (*head_ref)->next == NULL) 
         return; 
     t_stack *secLast = NULL; 
     t_stack *last = *head_ref; 
-  
+
     while (last->next != NULL) 
     { 
         secLast = last; 
