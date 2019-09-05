@@ -6,7 +6,7 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/10 14:02:56 by atitus            #+#    #+#             */
-/*   Updated: 2019/09/04 16:03:57 by atitus           ###   ########.fr       */
+/*   Updated: 2019/09/05 08:46:59 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ int     find_median(t_stack *head);
 int     find_q1(t_stack *head);
 int     find_q3(t_stack *head);
 int     medianlength(t_stack *head);
-int	apply_ins(t_stack *stack_a, char *instr);
+int	apply_inst(t_stack *stack_a, char *instr);
 void    sort_5_rev(t_stack *head);
 void	ft_swap(int *a, int *b);
 
@@ -92,6 +92,9 @@ int	check_duplicates(t_stack *s, int n);
 int	check_integer(char *s);
 void	ko(void);
 void	error(void);
+int		check_win(t_stack *a, t_stack *b);
+int		check_sorted(t_stack *s, int (*cmp)(int, int));
+int		valid(int argc, char **argv);
 
 
 #endif

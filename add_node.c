@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   add_node.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: atitus <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/10 14:02:11 by atitus            #+#    #+#             */
-/*   Updated: 2019/08/26 13:47:59 by emanana          ###   ########.fr       */
+/*   Updated: 2019/09/05 10:06:18 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,11 @@
 	head = NULL;
 	temp = head;
 	i = 1;
-
+	if(!valid(argc, argv))
+		{
+			ft_putendl("Error");
+			exit(1);
+		}
 	while (i < argc)
 	{
 		t_stack *new;

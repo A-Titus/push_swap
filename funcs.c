@@ -6,7 +6,7 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/26 15:54:39 by atitus            #+#    #+#             */
-/*   Updated: 2019/09/04 13:15:39 by atitus           ###   ########.fr       */
+/*   Updated: 2019/09/05 08:33:32 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ int		is_sorted(t_stack *head)
     while (nodePtr)
     {
         if(i > nodePtr->val)
-        	return -1;
+        	return 0;
         i = nodePtr->val;
         nodePtr = nodePtr->next;
     }

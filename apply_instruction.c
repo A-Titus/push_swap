@@ -6,13 +6,13 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/26 16:24:23 by atitus            #+#    #+#             */
-/*   Updated: 2019/09/04 15:13:17 by atitus           ###   ########.fr       */
+/*   Updated: 2019/09/05 08:04:09 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
- int	apply_ins(t_stack *stack_a, char *instr)
+ int	apply_inst(t_stack *stack_a, char *instr)
 {
 	a = stack_a;
 	if (ft_strequ(instr, "sa"))

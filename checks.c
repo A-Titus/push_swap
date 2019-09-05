@@ -6,7 +6,7 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 16:09:17 by atitus            #+#    #+#             */
-/*   Updated: 2019/09/04 16:09:18 by atitus           ###   ########.fr       */
+/*   Updated: 2019/09/05 09:51:09 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,16 +25,12 @@ int	check_integer(char *s)
 	return (1);
 }
 
-int	check_size(long n)
-{
-	return (n < MAX_INT && n > MIN_INT);
-}
 
 int	check_duplicates(t_stack *s, int n)
 {
 	while (s)
 	{
-		if (s->num == n)
+		if (s->val == n)
 			return (0);
 		s = s->next;
 	}
@@ -43,7 +39,8 @@ int	check_duplicates(t_stack *s, int n)
 
 int	check_inst(char *s)
 {
-	if (ft_strcmp(s, "sa") == 0
+	if
+		(ft_strcmp(s, "sa") == 0
 		|| ft_strcmp(s, "sb") == 0
 		|| ft_strcmp(s, "ss") == 0
 		|| ft_strcmp(s, "pa") == 0

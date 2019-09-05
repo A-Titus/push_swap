@@ -6,7 +6,7 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/28 08:47:15 by atitus            #+#    #+#             */
-/*   Updated: 2019/09/04 11:44:42 by atitus           ###   ########.fr       */
+/*   Updated: 2019/09/05 10:06:02 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,13 @@ void	push_swap(int argc, char **argv)
 	int length;
 	if (argc >= 3)
 	{
+		
 		a =  add_node(argc, argv);
 		length = list_size(a);
 		
 		if(length == 2)
 		{
-			if(is_sorted(a) != 1)
+			if(!is_sorted(a))
 			{
 				sa(&a);
 				ft_putendl("sa");
@@ -30,21 +31,21 @@ void	push_swap(int argc, char **argv)
 			
 		}else if (length == 3)
 		{
-			if(is_sorted(a) != 1)
+			if(!is_sorted(a))
 				sort_3(a);
 		}
 		else if (length == 4)
 		{
-			if(is_sorted(a) != 1)
+			if(!is_sorted(a))
 				sort_4(a);
 		}else if (length == 5)
 		{
-			if(is_sorted(a) != 1)
+			if(!is_sorted(a))
 				sort_5(a);
 		}
 		else 
 		{
-			if(is_sorted(a) != 1)
+			if(!is_sorted(a))
 			{				
 				push_above_q4(&a);
 				push_sorted(&b);
