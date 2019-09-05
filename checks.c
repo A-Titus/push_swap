@@ -6,11 +6,9 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 16:09:17 by atitus            #+#    #+#             */
-/*   Updated: 2019/09/05 09:51:09 by atitus           ###   ########.fr       */
+/*   Updated: 2019/09/05 11:46:29 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-
 
 #include "push_swap.h"
 
@@ -24,7 +22,6 @@ int	check_integer(char *s)
 	}
 	return (1);
 }
-
 
 int	check_duplicates(t_stack *s, int n)
 {
@@ -55,13 +52,3 @@ int	check_inst(char *s)
 	return (0);
 }
 
-int	check_space(char *s)
-{
-	while (*s)
-	{
-		if (*s == ' ')
-			return (1);
-		s++;
-	}
-	return (0);
-}

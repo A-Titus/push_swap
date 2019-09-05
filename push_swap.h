@@ -6,7 +6,7 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/10 14:02:56 by atitus            #+#    #+#             */
-/*   Updated: 2019/09/05 08:46:59 by atitus           ###   ########.fr       */
+/*   Updated: 2019/09/05 11:17:31 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,6 +90,7 @@ int     find_q2(t_stack *head);
 int	check_inst(char *s);
 int	check_duplicates(t_stack *s, int n);
 int	check_integer(char *s);
+int	check_spaces(char *s);
 void	ko(void);
 void	error(void);
 int		check_win(t_stack *a, t_stack *b);

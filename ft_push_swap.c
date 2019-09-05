@@ -6,7 +6,7 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/28 08:47:15 by atitus            #+#    #+#             */
-/*   Updated: 2019/09/05 10:06:02 by atitus           ###   ########.fr       */
+/*   Updated: 2019/09/05 11:46:51 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ void	push_swap(int argc, char **argv)
 				push_q2(&a);
 				push_sorted(&b);
 				push_q1(&a);
-				push_sorted(&b);      ////problem in q1
+				push_sorted(&b);
 			}
 			
 		}

@@ -6,7 +6,7 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/05 08:39:22 by atitus            #+#    #+#             */
-/*   Updated: 2019/09/05 09:56:34 by atitus           ###   ########.fr       */
+/*   Updated: 2019/09/05 11:30:41 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,18 @@ int		is_num(char *str)
 	}
 	return (1);
 }
+
+int	check_spaces(char *s)
+{
+	while (*s)
+	{
+		if (*s == ' ')
+			return (1);
+		s++;
+	}
+	return (0);
+}
+
 
 int		valid(int argc, char **argv)
 {
