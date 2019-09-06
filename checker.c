@@ -6,7 +6,7 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 16:09:02 by atitus            #+#    #+#             */
-/*   Updated: 2019/09/06 14:06:18 by atitus           ###   ########.fr       */
+/*   Updated: 2019/09/06 14:25:53 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,7 +106,7 @@ int		main(int argc, char **argv)
 	}
 	if (argc > 1)
 	{
-		checkerA(argc, argv);
+		checker(argc, argv);
 	}
 	else
 		return (0);
