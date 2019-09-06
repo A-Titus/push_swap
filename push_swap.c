@@ -17,7 +17,7 @@ void 	sort_3(t_stack *head)
 	t_stack	*temp;
 
 	temp = head;
-	if(temp->val > temp->next->val && temp->val < temp->next->next->val)
+	if (temp->val > temp->next->val && temp->val < temp->next->next->val)
 	{
 		sa(&temp);
 		ft_putendl("sa");
@@ -57,56 +57,7 @@ void	sort_5(t_stack *head)
 	minimum = 0;
 	count = 0;
 	minimum = min(a);
-		minimum = min(a);
-		if(minimum == a->val)
-		{
-			pb(&b, &a, a->val);	
-			ft_putendl("pb");
-		}
-		else if (minimum == a->next->val)
-		{
-			sa(&a);
-			pb(&b, &a, a->val);
-			ft_putendl("sa");
-			ft_putendl("pb");
-		}else if(minimum == a->next->next->val)
-		{
-			ra(&a, 1);
-			sa(&a);
-			pb(&b ,&a, a->val);
-			ft_putendl("ra");
-			ft_putendl("sa");
-			ft_putendl("pb");
-		}else if(minimum == a->next->next->next->val)
-		{
-			rra(&a);
-			rra(&a);
-			pb(&b, &a, a->val);
-			ft_putendl("rra");
-			ft_putendl("rra");
-			ft_putendl("pb");
-		}else if (minimum == a->next->next->next->next->val)
-		{
-			rra(&a);
-			pb(&b, &a, a->val);
-			ft_putendl("rra");
-			ft_putendl("pb");
-		}
-	sort_4(a);
-	pa(&a, &b, b->val);
-	ft_putendl("pa");
-}
 
-void	sort_4(t_stack *head)
-{
-	int minimum;
-	
-	a = head;
-	minimum = 0;
-
-	minimum = min(a);
-	
-	minimum = min(a);
 	if(minimum == a->val)
 	{
 		pb(&b, &a, a->val);	
@@ -118,7 +69,57 @@ void	sort_4(t_stack *head)
 		pb(&b, &a, a->val);
 		ft_putendl("sa");
 		ft_putendl("pb");
-	}else if(minimum == a->next->next->val)
+	}
+	else if(minimum == a->next->next->val)
+	{
+		ra(&a, 1);
+		sa(&a);
+		pb(&b ,&a, a->val);
+		ft_putendl("ra");
+		ft_putendl("sa");
+		ft_putendl("pb");
+	}
+	else if(minimum == a->next->next->next->val)
+	{
+		rra(&a);
+		rra(&a);
+		pb(&b, &a, a->val);
+		ft_putendl("rra");
+		ft_putendl("rra");
+		ft_putendl("pb");
+	}else if (minimum == a->next->next->next->next->val)
+	{
+		rra(&a);
+		pb(&b, &a, a->val);
+		ft_putendl("rra");
+		ft_putendl("pb");
+	}
+	sort_4(a);
+	pa(&a, &b, b->val);
+	ft_putendl("pa");
+}
+
+void	sort_4(t_stack *head)
+{
+	int minimum;
+
+	a = head;
+	minimum = 0;
+
+	minimum = min(a);
+	if (minimum == a->val)
+	{
+		pb(&b, &a, a->val);	
+		ft_putendl("pb");
+	}
+	else if (minimum == a->next->val)
+	{
+		sa(&a);
+		pb(&b, &a, a->val);
+		ft_putendl("sa");
+		ft_putendl("pb");
+	}
+	else if (minimum == a->next->next->val)
 	{
 		rra(&a);
 		rra(&a);
@@ -126,7 +127,8 @@ void	sort_4(t_stack *head)
 		ft_putendl("rra");
 		ft_putendl("rra");
 		ft_putendl("pb");
-	}else if(minimum == a->next->next->next->val)
+	}
+	else if (minimum == a->next->next->next->val)
 	{
 		rra(&a);
 		pb(&b, &a, a->val);
@@ -136,42 +138,38 @@ void	sort_4(t_stack *head)
 	sort_3(a);
 	pa(&a, &b, b->val);
 	ft_putendl("pa");
-
-
 }
 
 void 	push_median(t_stack **head)
 {
-    t_stack *current = NULL;
+    t_stack *current;
     int median;
 	int q2;
     int size;
     int i;
 	int middle_val;
 
-	
-		current = *head;
-		size = list_size(current);
-		i = 1;
-		q2 = find_q2(current);
-		median = find_median(current);
-		middle_val = middle(*head);
-		
-		while(i <= (size))
-		{   
-			current = *head;
-			if(current->val > q2 && current->val <= median)
-			{
-				pb(&b, &a, (a)->val);
-				ft_putendl("pb");
-			}
+	current = NULL;
+	current = *head;
+	size = list_size(current);
+	i = 1;
+	q2 = find_q2(current);
+	median = find_median(current);
+	middle_val = middle(*head);
 
-			else
-			{
-				ra(&a, 1);
-				ft_putendl("ra");
-			}
-			
-			i++;
-		} 
+	while (i <= (size))
+	{
+		current = *head;
+		if (current->val > q2 && current->val <= median)
+		{
+			pb(&b, &a, (a)->val);
+			ft_putendl("pb");
+		}
+		else
+		{
+			ra(&a, 1);
+			ft_putendl("ra");
+		}
+		i++;
+	}
 }

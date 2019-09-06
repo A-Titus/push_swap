@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   errors.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abdus-samad <abdus-samad@student.42.fr>    +#+  +:+       +#+        */
+/*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/05 08:39:22 by atitus            #+#    #+#             */
-/*   Updated: 2019/09/05 11:42:19 by abdus-samad      ###   ########.fr       */
+/*   Updated: 2019/09/06 09:38:57 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,16 +35,15 @@ long long	ft_atoll(char *str)
 	return (num * sign);
 }
 
-int	check_size(long n)
+int			check_size(long n)
 {
 	if ((n < -2147483648) || (n > 2147483647))
 		return (1);
 	else
-		return(0);
-		
+		return (0);
 }
 
-int		check_dup(int argc, char **argv)
+int			check_dup(int argc, char **argv)
 {
 	int i;
 	int j;
@@ -64,7 +63,7 @@ int		check_dup(int argc, char **argv)
 	return (0);
 }
 
-int		is_num(char *str)
+int			is_num(char *str)
 {
 	int i;
 
@@ -86,7 +85,7 @@ int		is_num(char *str)
 	return (1);
 }
 
-int	check_spaces(char *s)
+int			check_spaces(char *s)
 {
 	while (*s)
 	{
@@ -97,8 +96,7 @@ int	check_spaces(char *s)
 	return (0);
 }
 
-
-int		valid(int argc, char **argv)
+int			valid(int argc, char **argv)
 {
 	int		i;
 
@@ -107,8 +105,8 @@ int		valid(int argc, char **argv)
 	{
 		if (!is_num(argv[i]))
 			return (0);
-		if(check_size(ft_atoll(argv[i])))
-			return(0);
+		if (check_size(ft_atoll(argv[i])))
+			return (0);
 		i++;
 	}
 	if (check_dup(argc, argv))

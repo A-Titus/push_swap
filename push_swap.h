@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abdus-samad <abdus-samad@student.42.fr>    +#+  +:+       +#+        */
+/*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/10 14:02:56 by atitus            #+#    #+#             */
-/*   Updated: 2019/09/05 11:50:52 by abdus-samad      ###   ########.fr       */
+/*   Updated: 2019/09/06 13:02:21 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,14 +34,16 @@ t_stack *add_node(int argc, char **argv);
 t_stack *clone(t_stack* list);
 
 int     middle(t_stack *head);
+t_stack		*add_nodeA(int argc, char **argv);
+void	checkerA(int argc, char **argv);
 void	sa(t_stack **a);
 void	sb(t_stack **b);
 void	ss(t_stack **a, t_stack **b);
 void	print_list(t_stack *head);
 void 	pa(t_stack **a, t_stack **b, int val);
 void	pb(t_stack **b, t_stack **a, int val);
-void	deleteNode(t_stack *node);
-void	deleteList(t_stack **headRef);
+void	delete_node(t_stack *node);
+void	delete_list(t_stack **head_ref);
 void	ra(t_stack **head_ref, int k);
 void	rb(t_stack **head_ref, int k);
 void	rr(t_stack **a_ref, t_stack **b_ref, int i);

@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: abdus-samad <abdus-samad@student.42.fr>    +#+  +:+       +#+         #
+#    By: atitus <atitus@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/08/26 15:40:20 by atitus            #+#    #+#              #
-#    Updated: 2019/09/05 11:55:54 by abdus-samad      ###   ########.fr        #
+#    Updated: 2019/09/06 12:52:22 by atitus           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ SRC = add_node.c \
 	  apply_instruction.c \
 	  checker.c \
 	  delete.c \
-	  deleteList.c \
+	  delete_list.c \
 	  funcs.c \
 	  funcs2.c \
 	  operations1.c \
@@ -38,7 +38,7 @@ SRCO = add_node.o \
 	  apply_instruction.o \
 	  checker.o \
 	  delete.o \
-	  deleteList.o \
+	  delete_list.o \
 	  funcs.o \
 	  funcs2.o \
 	  operations1.o\
