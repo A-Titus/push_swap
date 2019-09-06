@@ -6,7 +6,7 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/10 14:02:11 by atitus            #+#    #+#             */
-/*   Updated: 2019/09/06 14:09:41 by atitus           ###   ########.fr       */
+/*   Updated: 2019/09/06 14:44:00 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,16 +23,11 @@ t_stack		*add_nodeA(int argc, char **argv)
 	temp = head;
 	i = 0;
 
-	// if (!valid(argc, argv))
-	// {
-	// 	ft_putendl("Error");/////////
-	// 	exit(1);
-	// }
-	/*if (argc <= 1)
+	if (!valid(argc, argv))
 	{
-		ft_putendl("No Values Entered");
+		ft_putendl("Error");/////////
 		exit(1);
-	}*/
+	}
 	while (i < argc)
 	{
 		new = (t_stack*)malloc(sizeof(t_stack));

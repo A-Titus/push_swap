@@ -6,7 +6,7 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 16:09:02 by atitus            #+#    #+#             */
-/*   Updated: 2019/09/06 14:25:53 by atitus           ###   ########.fr       */
+/*   Updated: 2019/09/06 14:52:32 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ void	checker(int argc, char **argv)
 		if (check_inst(inst))
 		{
 			apply_inst(a, inst);
-			//print_list(a);
 			free(inst);
 		}
 		else
@@ -58,8 +57,12 @@ void	checkerA(int argc, char **argv)
 		if (check_inst(inst))
 		{
 			apply_inst(a, inst);
-			//print_list(a);
 			free(inst);
+		}
+		else
+		{
+			ft_putendl("Error");
+			exit(1);
 		}
 	}
 	if (is_sorted(a) && b == NULL)
@@ -96,12 +99,11 @@ int		main(int argc, char **argv)
 		int counter;
 		char **str = ft_strsplit(argv[1], ' ');
 		counter = word_count(str);
-		//printf(" %s %i\n", " the number of  args im a string ", counter);
 		if (counter == 1)
 		{
 			exit(1);
 		}
-		print_list(a);
+		//print_list(a);
 		checkerA(counter, str);
 	}
 	if (argc > 1)
