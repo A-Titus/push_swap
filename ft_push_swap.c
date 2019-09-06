@@ -6,7 +6,7 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/28 08:47:15 by atitus            #+#    #+#             */
-/*   Updated: 2019/09/06 14:29:10 by atitus           ###   ########.fr       */
+/*   Updated: 2019/09/06 16:28:51 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 void	push_swap(int argc, char **argv)
 {
+	
 	int length;
 
 	if (argc >= 3)
@@ -99,6 +100,6 @@ int		main(int argc, char **argv)
 		}
 		push_swap(argc, argv);
 	}
-	else
+	 else
 		return (0);
 }

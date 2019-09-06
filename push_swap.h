@@ -6,7 +6,7 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/10 14:02:56 by atitus            #+#    #+#             */
-/*   Updated: 2019/09/06 13:02:21 by atitus           ###   ########.fr       */
+/*   Updated: 2019/09/06 16:35:24 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,6 +85,7 @@ int	check_duplicates(t_stack *s, int n);
 int	check_integer(char *s);
 int	check_spaces(char *s);
 int		valid(int argc, char **argv);
+int 	word_count(char **str); // was static
 
 
 #endif

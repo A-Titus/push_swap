@@ -6,7 +6,7 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 16:09:02 by atitus            #+#    #+#             */
-/*   Updated: 2019/09/06 14:52:32 by atitus           ###   ########.fr       */
+/*   Updated: 2019/09/06 16:24:24 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ void	checkerA(int argc, char **argv)
 	delete_list(&a);
 	delete_list(&b);
 }
-static int 	word_count(char **str)
+ int 	word_count(char **str)
 {
 	int i;
 	i = 0;
@@ -110,6 +110,7 @@ int		main(int argc, char **argv)
 	{
 		checker(argc, argv);
 	}
-	else
+	
+	 else
 		return (0);
 }
