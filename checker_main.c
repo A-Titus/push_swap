@@ -1,28 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   delete_list.c                                      :+:      :+:    :+:   */
+/*   checker_main.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/16 09:56:33 by atitus            #+#    #+#             */
-/*   Updated: 2019/09/07 09:43:04 by atitus           ###   ########.fr       */
+/*   Created: 2019/09/07 09:49:59 by atitus            #+#    #+#             */
+/*   Updated: 2019/09/07 09:50:40 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	delete_list(t_stack **head_ref)
+int		main(int argc, char **argv)
 {
-	t_stack	*current;
-	t_stack	*next;
-
-	current = *head_ref;
-	while (current != NULL)
+	if (argc == 2) 
 	{
-		next = current->next;
-		free(current);
-		current = next;
+		int counter;
+		char **str = ft_strsplit(argv[1], ' ');
+		counter = word_count(str);
+		if (counter == 1)
+		{
+			exit(1);
+		}
+		//print_list(a);
+		checkerA(counter, str);
 	}
-	*head_ref = NULL;
+	if (argc > 1)
+	{
+		checker(argc, argv);
+	}
+	
+	 else
+		return (0);
 }

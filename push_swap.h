@@ -6,7 +6,7 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/10 14:02:56 by atitus            #+#    #+#             */
-/*   Updated: 2019/09/06 16:35:24 by atitus           ###   ########.fr       */
+/*   Updated: 2019/09/07 09:49:32 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,10 @@ t_stack *clone(t_stack* list);
 
 int     middle(t_stack *head);
 t_stack		*add_nodeA(int argc, char **argv);
+void	checker(int argc, char **argv);
 void	checkerA(int argc, char **argv);
+void	push_swap(int argc, char **argv);
+void	push_swapA(int argc, char **argv);
 void	sa(t_stack **a);
 void	sb(t_stack **b);
 void	ss(t_stack **a, t_stack **b);
