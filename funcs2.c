@@ -6,7 +6,7 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/05 08:59:18 by atitus            #+#    #+#             */
-/*   Updated: 2019/09/06 10:46:26 by atitus           ###   ########.fr       */
+/*   Updated: 2019/09/07 13:41:47 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,7 @@ void		simple_sort(t_stack *head)
 		while (help)
 		{
 			if (help->val < sort_node->val)
-			{
 				sort_node = help;
-			}
 			help = help->next;
 		}
 		if (sort_node != temp)

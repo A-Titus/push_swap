@@ -6,7 +6,7 @@
 /*   By: atitus <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/22 12:54:40 by atitus            #+#    #+#             */
-/*   Updated: 2019/07/29 14:33:35 by atitus           ###   ########.fr       */
+/*   Updated: 2019/09/07 13:37:20 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	print_list(t_stack *head)
 {
-	while(head)
+	while (head)
 	{
 		ft_putnbr(head->val);
 		ft_putchar('\n');

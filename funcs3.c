@@ -1,36 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap_main.c                                   :+:      :+:    :+:   */
+/*   funcs3.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/07 09:45:42 by atitus            #+#    #+#             */
-/*   Updated: 2019/09/07 14:06:15 by atitus           ###   ########.fr       */
+/*   Created: 2019/09/07 13:53:29 by atitus            #+#    #+#             */
+/*   Updated: 2019/09/07 14:07:43 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int		main(int argc, char **argv)
+void	error(void)
 {
-	int		count;
-	char	**strings;
+    ft_putendl_fd("Error", STDERR_FILENO);
+    exit(1);
+}
 
-	if (argc == 2)
-	{
-		strings = ft_strsplit(argv[1], ' ');
-		count = word_count(strings);
-		if (count == 1)
-		{
-			exit(1);
-		}
-		push_swap_a(count, strings);
-	}
-	if (argc > 1)
-	{
-		push_swap(argc, argv);
-	}
-	else
-		return (0);
+void    print_ko(void)
+{
+    ft_putendl("KO");
+    exit(1);
+}
+
+void    print_ok(void)
+{
+    ft_putendl("OK");
+    exit(1);
 }

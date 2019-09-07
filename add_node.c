@@ -6,13 +6,13 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/10 14:02:11 by atitus            #+#    #+#             */
-/*   Updated: 2019/09/06 14:44:00 by atitus           ###   ########.fr       */
+/*   Updated: 2019/09/07 13:52:09 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_stack		*add_nodeA(int argc, char **argv)
+t_stack		*add_node_a(int argc, char **argv)
 {
 	t_stack	*head;
 	t_stack *temp;
@@ -22,12 +22,8 @@ t_stack		*add_nodeA(int argc, char **argv)
 	head = NULL;
 	temp = head;
 	i = 0;
-
 	if (!valid(argc, argv))
-	{
-		ft_putendl("Error");/////////
-		exit(1);
-	}
+		error();
 	while (i < argc)
 	{
 		new = (t_stack*)malloc(sizeof(t_stack));
@@ -65,10 +61,7 @@ t_stack		*add_node(int argc, char **argv)
 		exit(1);
 	}
 	if (!valid(argc, argv))
-	{
-		ft_putendl("Error");/////////
-		exit(1);
-	}
+		error();
 	while (i < argc)
 	{
 		new = (t_stack*)malloc(sizeof(t_stack));
