@@ -6,7 +6,7 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/10 14:02:11 by atitus            #+#    #+#             */
-/*   Updated: 2019/09/07 13:52:09 by atitus           ###   ########.fr       */
+/*   Updated: 2019/09/09 13:29:19 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,71 +14,58 @@
 
 t_stack		*add_node_a(int argc, char **argv)
 {
-	t_stack	*head;
-	t_stack *temp;
-	t_stack *new;
-	int		i;
+	struct s_add val;
 
-	head = NULL;
-	temp = head;
-	i = 0;
+	val.head = NULL;
+	val.temp = val.head;
+	val.i = 0;
 	if (!valid(argc, argv))
 		error();
-	while (i < argc)
+	while (val.i < argc)
 	{
-		new = (t_stack*)malloc(sizeof(t_stack));
-		new->val = ft_atoi(argv[i]);
-		new->next = NULL;
-		if (temp == NULL)
+		val.new = (t_stack*)malloc(sizeof(t_stack));
+		val.new->val = ft_atoi(argv[val.i]);
+		val.new->next = NULL;
+		if (val.temp == NULL)
 		{
-			head = new;
-			temp = head;
+			val.head = val.new;
+			val.temp = val.head;
 		}
 		else
 		{
-			temp->next = new;
-			temp = temp->next;
+			val.temp->next = val.new;
+			val.temp = val.temp->next;
 		}
-		i++;
+		val.i++;
 	}
-	a = head;
-	return (a);
+	return (val.head);
 }
 
 t_stack		*add_node(int argc, char **argv)
 {
-	t_stack	*head;
-	t_stack *temp;
-	t_stack *new;
-	int		i;
+	struct s_add val;
 
-	head = NULL;
-	temp = head;
-	i = 1;
-	if (argc <= 1)
-	{
-		ft_putendl("No Values Entered");
-		exit(1);
-	}
+	val.head = NULL;
+	val.temp = val.head;
+	val.i = 1;
 	if (!valid(argc, argv))
 		error();
-	while (i < argc)
+	while (val.i < argc)
 	{
-		new = (t_stack*)malloc(sizeof(t_stack));
-		new->val = ft_atoi(argv[i]);
-		new->next = NULL;
-		if (temp == NULL)
+		val.new = (t_stack*)malloc(sizeof(t_stack));
+		val.new->val = ft_atoi(argv[val.i]);
+		val.new->next = NULL;
+		if (val.temp == NULL)
 		{
-			head = new;
-			temp = head;
+			val.head = val.new;
+			val.temp = val.head;
 		}
 		else
 		{
-			temp->next = new;
-			temp = temp->next;
+			val.temp->next = val.new;
+			val.temp = val.temp->next;
 		}
-		i++;
+		val.i++;
 	}
-	a = head;
-	return (a);
+	return (val.head);
 }

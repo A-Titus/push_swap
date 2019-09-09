@@ -6,7 +6,7 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/05 08:59:18 by atitus            #+#    #+#             */
-/*   Updated: 2019/09/07 13:41:47 by atitus           ###   ########.fr       */
+/*   Updated: 2019/09/09 13:27:56 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,31 +14,28 @@
 
 void		simple_sort(t_stack *head)
 {
-	t_stack		*temp;
-	t_stack		*sort_node;
-	t_stack		*help;
-	int			sort_value;
+	struct s_sort val;
 
-	temp = head;
-	sort_node = NULL;
-	help = NULL;
-	while (temp)
+	val.temp = head;
+	val.sort_node = NULL;
+	val.help = NULL;
+	while (val.temp)
 	{
-		sort_node = temp;
-		help = temp->next;
-		while (help)
+		val.sort_node = val.temp;
+		val.help = val.temp->next;
+		while (val.help)
 		{
-			if (help->val < sort_node->val)
-				sort_node = help;
-			help = help->next;
+			if (val.help->val < val.sort_node->val)
+				val.sort_node = val.help;
+			val.help = val.help->next;
 		}
-		if (sort_node != temp)
+		if (val.sort_node != val.temp)
 		{
-			sort_value = sort_node->val;
-			sort_node->val = temp->val;
-			temp->val = sort_value;
+			val.sort_value = val.sort_node->val;
+			val.sort_node->val = val.temp->val;
+			val.temp->val = val.sort_value;
 		}
-		temp = temp->next;
+		val.temp = val.temp->next;
 	}
 }
 

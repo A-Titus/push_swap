@@ -6,7 +6,7 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/07 09:45:42 by atitus            #+#    #+#             */
-/*   Updated: 2019/09/07 14:06:15 by atitus           ###   ########.fr       */
+/*   Updated: 2019/09/09 10:26:35 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,9 @@ int		main(int argc, char **argv)
 		push_swap(argc, argv);
 	}
 	else
+	{
+		delete_list(&a);
+		delete_list(&b);
 		return (0);
+	}
 }

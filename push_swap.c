@@ -3,56 +3,37 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: atitus <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/07 12:13:18 by atitus            #+#    #+#             */
-/*   Updated: 2019/09/07 12:35:48 by atitus           ###   ########.fr       */
+/*   Updated: 2019/09/09 13:28:27 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	sort_3(t_stack *head)
+void		sort_3(t_stack *head)
 {
 	t_stack	*temp;
 
 	temp = head;
 	if (temp->val > temp->next->val && temp->val < temp->next->next->val)
-	{
-		sa(&temp);
-		ft_putendl("sa");
-	}
+		call_sa(temp);
 	else if (temp->val > temp->next->val && temp->next->val
 			> temp->next->next->val)
-	{
-		sa(&temp);
-		rra(&temp);
-		ft_putendl("sa");
-		ft_putendl("rra");
-	}
+		call_sa_rra(temp);
 	else if (temp->val > temp->next->val && temp->next->val
 			< temp->next->next->val)
-	{
-		ra(&temp, 1);
-		ft_putendl("ra");
-	}
+		call_ra(temp);
 	else if (temp->val < temp->next->val && temp->next->val
 			> temp->next->next->val)
-	{
-		sa(&temp);
-		ra(&temp, 1);
-		ft_putendl("sa");
-		ft_putendl("ra");
-	}
+		call_sa_ra(temp);
 	else if (temp->val < temp->next->val && temp->next->val
 			> temp->next->next->val)
-	{
-		rra(&temp);
-		ft_putendl("rra");
-	}
+		call_rra(temp);
 }
 
-void	sort_5(t_stack *head)
+void		sort_5(t_stack *head)
 {
 	int minimum;
 	int count;
@@ -62,48 +43,21 @@ void	sort_5(t_stack *head)
 	count = 0;
 	minimum = min(a);
 	if (minimum == a->val)
-	{
-		pb(&b, &a, a->val);
-		ft_putendl("pb");
-	}
+		call_pb(a);
 	else if (minimum == a->next->val)
-	{
-		sa(&a);
-		pb(&b, &a, a->val);
-		ft_putendl("sa");
-		ft_putendl("pb");
-	}
+		call_sa_pb(a);
 	else if (minimum == a->next->next->val)
-	{
-		ra(&a, 1);
-		sa(&a);
-		pb(&b, &a, a->val);
-		ft_putendl("ra");
-		ft_putendl("sa");
-		ft_putendl("pb");
-	}
+		callra_sa_pb(a);
 	else if (minimum == a->next->next->next->val)
-	{
-		rra(&a);
-		rra(&a);
-		pb(&b, &a, a->val);
-		ft_putendl("rra");
-		ft_putendl("rra");
-		ft_putendl("pb");
-	}
+		call_rra2_pb(a);
 	else if (minimum == a->next->next->next->next->val)
-	{
-		rra(&a);
-		pb(&b, &a, a->val);
-		ft_putendl("rra");
-		ft_putendl("pb");
-	}
+		call_rra_pb(a);
 	sort_4(a);
 	pa(&a, &b, b->val);
 	ft_putendl("pa");
 }
 
-void	sort_4(t_stack *head)
+void		sort_4(t_stack *head)
 {
 	int minimum;
 
@@ -111,67 +65,39 @@ void	sort_4(t_stack *head)
 	minimum = 0;
 	minimum = min(a);
 	if (minimum == a->val)
-	{
-		pb(&b, &a, a->val);
-		ft_putendl("pb");
-	}
+		call_pb(a);
 	else if (minimum == a->next->val)
-	{
-		sa(&a);
-		pb(&b, &a, a->val);
-		ft_putendl("sa");
-		ft_putendl("pb");
-	}
+		call_sa_pb(a);
 	else if (minimum == a->next->next->val)
-	{
-		rra(&a);
-		rra(&a);
-		pb(&b, &a, a->val);
-		ft_putendl("rra");
-		ft_putendl("rra");
-		ft_putendl("pb");
-	}
+		call_rra2_pb(a);
 	else if (minimum == a->next->next->next->val)
-	{
-		rra(&a);
-		pb(&b, &a, a->val);
-		ft_putendl("rra");
-		ft_putendl("pb");
-	}
+		call_rra_pb(a);
 	sort_3(a);
 	pa(&a, &b, b->val);
 	ft_putendl("pa");
 }
 
-void	push_median(t_stack **head)
+void		push_median(t_stack **head)
 {
-	t_stack *current;
-	int		median;
-	int		q2;
-	int		size;
-	int		i;
-	int		middle_val;
+	struct s_median data;
 
-	current = NULL;
-	current = *head;
-	size = list_size(current);
-	i = 1;
-	q2 = find_q2(current);
-	median = find_median(current);
-	middle_val = middle(*head);
-	while (i <= (size))
+	data.current = NULL;
+	data.current = *head;
+	data.size = list_size(data.current);
+	data.i = 1;
+	data.q2 = find_q2(data.current);
+	data.median = find_median(data.current);
+	data.middle_val = middle(*head);
+	while (data.i <= (data.size))
 	{
-		current = *head;
-		if (current->val > q2 && current->val <= median)
+		data.current = *head;
+		if (data.current->val > data.q2 && data.current->val <= data.median)
 		{
 			pb(&b, &a, (a)->val);
 			ft_putendl("pb");
 		}
 		else
-		{
-			ra(&a, 1);
-			ft_putendl("ra");
-		}
-		i++;
+			call_ra_median(a);
+		data.i++;
 	}
 }

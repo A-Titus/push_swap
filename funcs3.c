@@ -6,7 +6,7 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/07 13:53:29 by atitus            #+#    #+#             */
-/*   Updated: 2019/09/07 14:07:43 by atitus           ###   ########.fr       */
+/*   Updated: 2019/09/09 08:25:02 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,18 @@
 
 void	error(void)
 {
-    ft_putendl_fd("Error", STDERR_FILENO);
-    exit(1);
+	ft_putendl_fd("Error", STDERR_FILENO);
+	exit(1);
 }
 
-void    print_ko(void)
+void	print_ko(void)
 {
-    ft_putendl("KO");
-    exit(1);
+	ft_putendl("KO");
+	exit(1);
 }
 
-void    print_ok(void)
+void	print_ok(void)
 {
-    ft_putendl("OK");
-    exit(1);
+	ft_putendl("OK");
+	exit(1);
 }

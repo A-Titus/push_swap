@@ -6,7 +6,7 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/05 08:39:22 by atitus            #+#    #+#             */
-/*   Updated: 2019/09/06 09:38:57 by atitus           ###   ########.fr       */
+/*   Updated: 2019/09/09 12:04:49 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,22 +94,4 @@ int			check_spaces(char *s)
 		s++;
 	}
 	return (0);
-}
-
-int			valid(int argc, char **argv)
-{
-	int		i;
-
-	i = 1;
-	while (i < argc)
-	{
-		if (!is_num(argv[i]))
-			return (0);
-		if (check_size(ft_atoll(argv[i])))
-			return (0);
-		i++;
-	}
-	if (check_dup(argc, argv))
-		return (0);
-	return (1);
 }

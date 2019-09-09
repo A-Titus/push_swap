@@ -6,7 +6,7 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/26 16:24:23 by atitus            #+#    #+#             */
-/*   Updated: 2019/09/06 09:21:49 by atitus           ###   ########.fr       */
+/*   Updated: 2019/09/09 08:53:12 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,8 @@
 
 int	apply_inst(t_stack *stack_a, char *instr)
 {
-	a = stack_a;
 	if (ft_strequ(instr, "sa"))
-		sa(&a);
+		sa(&stack_a);
 	else if (ft_strequ(instr, "sb"))
 		sb(&b);
 	else if (ft_strequ(instr, "ss"))

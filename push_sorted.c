@@ -6,7 +6,7 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/29 11:36:50 by atitus            #+#    #+#             */
-/*   Updated: 2019/09/07 11:10:01 by atitus           ###   ########.fr       */
+/*   Updated: 2019/09/09 13:13:30 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,41 +60,28 @@ int		find_dist(t_stack *head)
 
 void	push_sorted(t_stack **b)
 {
-	int		size;
-	int		i;
-	int		middle_val;
-	int		max_val;
-	t_stack	*current;
+	struct s_ps val;
 
-	current = NULL;
-	middle_val = middle(*b);
-	size = list_size(*b);
-	i = 1;
-	while (i > -1)
+	val.current = NULL;
+	val.middle_val = middle(*b);
+	val.size = list_size(*b);
+	val.i = 1;
+	while (val.i > -1)
 	{
-		size = list_size(*b);
-		current = *b;
-		max_val = max(*b);
-		if (size == 0)
+		val.size = list_size(*b);
+		val.current = *b;
+		val.max_val = max(*b);
+		if (val.size == 0)
 		{
-			i = -1;
+			val.i = -1;
 			break ;
 		}
-		if (current->val == max_val)
-		{
-			pa(&a, b, (*b)->val);
-			ft_putendl("pa");
-		}
+		if (val.current->val == val.max_val)
+			call_pa_b(b);
 		else if (find_dist(*b) == 1)
-		{
-			rb(b, 1);
-			ft_putendl("rb");
-		}
+			call_rb(b);
 		else
-		{
-			rrb(b);
-			ft_putendl("rrb");
-		}
-		i++;
+			call_rrb(b);
+		val.i++;
 	}
 }

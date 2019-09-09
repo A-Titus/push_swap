@@ -6,7 +6,7 @@
 #    By: atitus <atitus@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/08/26 15:40:20 by atitus            #+#    #+#              #
-#    Updated: 2019/09/07 13:52:32 by atitus           ###   ########.fr        #
+#    Updated: 2019/09/09 13:09:33 by atitus           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,11 +30,14 @@ SRC = add_node.c \
 	  push_100.c \
 	  errors.c \
 	  checks.c \
-	  funcs3.c
+	  funcs3.c \
+	  call_funcs.c \
+	  call_funcs2.c \
+	  call_func3.c \
+	  call_funcs4.c \
+	  sort_100.c
 
 	  
-
-
 SRCO = add_node.o \
 	  apply_instruction.o \
 	  checker.o \
@@ -53,7 +56,12 @@ SRCO = add_node.o \
 	  push_100.o \
 	  errors.o \
 	  checks.o \
-	  funcs3.o
+	  funcs3.o \
+	  call_funcs.o \
+	  call_funcs2.o \
+	  call_func3.o \
+	  call_funcs4.o \
+	  sort_100.o
 
 	  
 CFLAGS = -Wall -Werror -Wextra 

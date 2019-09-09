@@ -1,37 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checker_main.c                                     :+:      :+:    :+:   */
+/*   call_funcs4.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/07 09:49:59 by atitus            #+#    #+#             */
-/*   Updated: 2019/09/09 09:25:51 by atitus           ###   ########.fr       */
+/*   Created: 2019/09/09 12:22:05 by atitus            #+#    #+#             */
+/*   Updated: 2019/09/09 12:58:16 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int		main(int argc, char **argv)
+void	call_rrb(t_stack **b)
 {
-	int		counter;
-	char	**str;
+	rrb(b);
+	ft_putendl("rrb");
+}
 
-	str = NULL;
-	if (argc == 2)
-	{
-		str = ft_strsplit(argv[1], ' ');
-		counter = word_count(str);
-		if (counter == 1)
-		{
-			exit(1);
-		}
-		checker_a(counter, str);
-	}
-	if (argc > 1)
-	{
-		checker(argc, argv);
-	}
-	else
-		return (0);
+void	call_rb(t_stack **b)
+{
+	rb(b, 1);
+	ft_putendl("rb");
+}
+
+void	call_pa_b(t_stack **b)
+{
+	pa(&a, b, (*b)->val);
+	ft_putendl("pa");
 }
