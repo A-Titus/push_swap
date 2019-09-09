@@ -6,7 +6,7 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/28 08:47:15 by atitus            #+#    #+#             */
-/*   Updated: 2019/09/09 13:08:53 by atitus           ###   ########.fr       */
+/*   Updated: 2019/09/09 16:28:00 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,10 @@
 void	push_swap_a(int argc, char **argv)
 {
 	int length;
+	t_stack *a;
+	t_stack *b;
+
+	b = NULL;
 
 	if (argc >= 3)
 	{
@@ -25,14 +29,14 @@ void	push_swap_a(int argc, char **argv)
 		else if (length == 3)
 			call_sort_3(a);
 		else if (length == 4)
-			call_sort_4(a);
+			call_sort_4(a, b);
 		else if (length == 5)
-			call_sort_5(a);
+			call_sort_5(a, b);
 		else
 		{
 			if (!is_sorted(a))
 			{
-				call_sort_100();
+				call_sort_100(a, b);
 			}
 		}
 	}
@@ -41,6 +45,10 @@ void	push_swap_a(int argc, char **argv)
 void	push_swap(int argc, char **argv)
 {
 	int length;
+	t_stack *a;
+	t_stack *b;
+
+	b =NULL;
 
 	if (argc >= 3)
 	{
@@ -51,14 +59,14 @@ void	push_swap(int argc, char **argv)
 		else if (length == 3)
 			call_sort_3(a);
 		else if (length == 4)
-			call_sort_4(a);
+			call_sort_4(a, b);
 		else if (length == 5)
-			call_sort_5(a);
+			call_sort_5(a, b);
 		else
 		{
 			if (!is_sorted(a))
 			{
-				call_sort_100();
+				call_sort_100(a, b);
 			}
 		}
 	}

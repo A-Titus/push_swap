@@ -6,7 +6,7 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 16:09:02 by atitus            #+#    #+#             */
-/*   Updated: 2019/09/07 14:04:32 by atitus           ###   ########.fr       */
+/*   Updated: 2019/09/09 16:24:43 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 void		checker(int argc, char **argv)
 {
+	t_stack *a;
 	t_stack	*b;
 	char	*inst;
 
@@ -23,7 +24,7 @@ void		checker(int argc, char **argv)
 	{
 		if (check_inst(inst))
 		{
-			apply_inst(a, inst);
+			apply_inst(a, b, inst);
 			free(inst);
 		}
 		else
@@ -40,6 +41,7 @@ void		checker(int argc, char **argv)
 void		checker_a(int argc, char **argv)
 {
 	t_stack	*b;
+	t_stack *a;
 	char	*inst;
 
 	a = add_node_a(argc, argv);
@@ -48,7 +50,7 @@ void		checker_a(int argc, char **argv)
 	{
 		if (check_inst(inst))
 		{
-			apply_inst(a, inst);
+			apply_inst(a, b, inst);
 			free(inst);
 		}
 		else
