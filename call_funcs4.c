@@ -6,7 +6,7 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/09 12:22:05 by atitus            #+#    #+#             */
-/*   Updated: 2019/09/09 16:32:36 by atitus           ###   ########.fr       */
+/*   Updated: 2019/09/10 08:02:02 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ void	call_rb(t_stack **b)
 	ft_putendl("rb");
 }
 
-void	call_pa_b(t_stack **a, t_stack **b)
+void	call_pa_b(t_stack **b)
 {
-	pa(a, b, (*b)->val);
+	pa(&g_a, b, (*b)->val);
 	ft_putendl("pa");
 }

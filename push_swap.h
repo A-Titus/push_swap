@@ -6,7 +6,7 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/10 14:02:56 by atitus            #+#    #+#             */
-/*   Updated: 2019/09/09 16:29:00 by atitus           ###   ########.fr       */
+/*   Updated: 2019/09/10 08:23:16 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ typedef struct		s_stack
 	int				val;
 	struct s_stack	*next;
 }					t_stack;
+t_stack *g_a;
+t_stack *g_b;
 
 struct				s_median
 {
@@ -93,15 +95,15 @@ void				call_sa_rra(t_stack *temp);
 void				call_ra(t_stack *temp);
 void				call_sa_ra(t_stack *temp);
 void				call_rra(t_stack *temp);
-void				call_pb(t_stack *a, t_stack *b);
-void				call_sa_pb(t_stack *a, t_stack *b);
-void				callra_sa_pb(t_stack *a, t_stack *b);
-void				call_rra2_pb(t_stack *a, t_stack *b);
-void				call_rra_pb(t_stack *a, t_stack *b);
+void				call_pb(t_stack *head);
+void				call_sa_pb(t_stack *head);
+void				callra_sa_pb(t_stack *head);
+void				call_rra2_pb(t_stack *head);
+void				call_rra_pb(t_stack *head);
 void				sort_2(t_stack *a);
 void				call_sort_3(t_stack *a);
-void				call_sort_4(t_stack *a, t_stack *b);
-void				call_sort_5(t_stack *a, t_stack *b);
+void				call_sort_4(t_stack *a);
+void				call_sort_5(t_stack *a);
 void				sort_100(t_stack *a, t_stack *b);
 void				error(void);
 void				print_ok(void);
@@ -125,31 +127,31 @@ void				rrb(t_stack **head_ref);
 void				rrr(t_stack **a_ref, t_stack **b_ref);
 void				simple_sort(t_stack *stack);
 void				sort_3(t_stack *head);
-void				sort_4(t_stack *a, t_stack *b);
-void				sort_5(t_stack *a, t_stack *b);
-void				call_sort_100(t_stack *a, t_stack *b);
+void				sort_4(t_stack *head);
+void				sort_5(t_stack *head);
+void				call_sort_100(void);
 int					max(t_stack *head);
 int					min(t_stack *head);
 int					list_size(t_stack *head);
 int					is_sorted(t_stack *head);
-void				push_sorted(t_stack **a, t_stack **b);
+void				push_sorted(t_stack **b);
 void				simple_sort(t_stack *head);
 int					find_median(t_stack *head);
 int					find_q1(t_stack *head);
 int					find_q3(t_stack *head);
 int					medianlength(t_stack *head);
-int					apply_inst(t_stack *a, t_stack *b, char *instr);
+int					apply_inst(t_stack *stack_a, char *instr);
 
-void				call_pa_b(t_stack **a, t_stack **b);
+void				call_pa_b(t_stack **b);
 void				call_rb(t_stack **b);
 void				call_rrb(t_stack **b);
 
-void				push_above_q4(t_stack **a, t_stack **b);
-void				push_q2(t_stack **a, t_stack **b);
-void				push_q3(t_stack **a, t_stack **b);
-void				push_q4(t_stack **a, t_stack **b);
-void				push_median(t_stack **a, t_stack **b);
-void				push_q1(t_stack **a, t_stack **b);
+void				push_above_q4(t_stack **head);
+void				push_q2(t_stack **head);
+void				push_q3(t_stack **head);
+void				push_q4(t_stack **head);
+void				push_median(t_stack **head);
+void				push_q1(t_stack **head);
 int					find_q4(t_stack *head);
 int					find_dist(t_stack *head);
 int					find_q2(t_stack *head);

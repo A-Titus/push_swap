@@ -6,7 +6,7 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/29 11:36:50 by atitus            #+#    #+#             */
-/*   Updated: 2019/09/09 16:19:01 by atitus           ###   ########.fr       */
+/*   Updated: 2019/09/09 13:13:30 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ int		find_dist(t_stack *head)
 		return (-1);
 }
 
-void	push_sorted(t_stack **a, t_stack **b)
+void	push_sorted(t_stack **b)
 {
 	struct s_ps val;
 
@@ -77,7 +77,7 @@ void	push_sorted(t_stack **a, t_stack **b)
 			break ;
 		}
 		if (val.current->val == val.max_val)
-			call_pa_b(a, b);
+			call_pa_b(b);
 		else if (find_dist(*b) == 1)
 			call_rb(b);
 		else
