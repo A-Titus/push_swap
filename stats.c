@@ -6,7 +6,7 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/13 13:16:45 by atitus            #+#    #+#             */
-/*   Updated: 2019/09/09 13:28:59 by atitus           ###   ########.fr       */
+/*   Updated: 2019/09/10 13:25:35 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@ int		find_median(t_stack *head)
 			ptr1 = ptr1->next;
 		}
 	}
-	return (ptr1->val);
 	delete_list(&temp);
+	return (ptr1->val);
 }
 
 int		find_q1(t_stack *head)
@@ -54,8 +54,8 @@ int		find_q1(t_stack *head)
 			ptr1 = ptr1->next;
 		}
 	}
-	return (ptr1->val);
 	delete_list(&temp);
+	return (ptr1->val);
 }
 
 int		find_q2(t_stack *head)
@@ -78,8 +78,8 @@ int		find_q2(t_stack *head)
 			ptr1 = ptr1->next;
 		}
 	}
-	return (ptr1->val);
 	delete_list(&temp);
+	return (ptr1->val);
 }
 
 int		find_q3(t_stack *head)
@@ -107,8 +107,8 @@ int		find_q3(t_stack *head)
 			chunk.ptr1 = chunk.ptr1->next;
 		}
 	}
-	return (chunk.ptr1->val);
 	delete_list(&chunk.temp);
+	return (chunk.ptr1->val);
 }
 
 int		find_q4(t_stack *head)
@@ -135,6 +135,6 @@ int		find_q4(t_stack *head)
 			chunk.ptr1 = chunk.ptr1->next;
 		}
 	}
-	return (chunk.ptr1->val);
 	delete_list(&chunk.temp);
+	return (chunk.ptr1->val);
 }

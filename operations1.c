@@ -6,7 +6,7 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/11 09:19:53 by atitus            #+#    #+#             */
-/*   Updated: 2019/09/09 09:14:08 by atitus           ###   ########.fr       */
+/*   Updated: 2019/09/10 12:29:28 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ void	pa(t_stack **a, t_stack **b, int val)
 {
 	t_stack *new_node;
 
-	new_node = (t_stack*)malloc(sizeof(t_stack));
+	new_node = (t_stack*)ft_memalloc(sizeof(t_stack));
 	new_node->val = val;
 	new_node->next = (*a);
 	(*a) = new_node;
@@ -64,7 +64,7 @@ void	pb(t_stack **b, t_stack **a, int val)
 {
 	t_stack *new_node;
 
-	new_node = (t_stack*)malloc(sizeof(t_stack));
+	new_node = (t_stack*)ft_memalloc(sizeof(t_stack));
 	new_node->val = val;
 	new_node->next = (*b);
 	(*b) = new_node;

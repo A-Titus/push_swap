@@ -6,7 +6,7 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/28 08:47:15 by atitus            #+#    #+#             */
-/*   Updated: 2019/09/10 08:04:15 by atitus           ###   ########.fr       */
+/*   Updated: 2019/09/10 13:50:00 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,8 @@ void	push_swap_a(int argc, char **argv)
 				call_sort_100();
 			}
 		}
+		delete_list(&g_a);
+		delete_list(&g_b);
 	}
 }
 
@@ -61,5 +63,7 @@ void	push_swap(int argc, char **argv)
 				call_sort_100();
 			}
 		}
+		delete_list(&g_a);
+		delete_list(&g_b);
 	}
 }

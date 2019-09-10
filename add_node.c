@@ -6,7 +6,7 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/10 14:02:11 by atitus            #+#    #+#             */
-/*   Updated: 2019/09/09 13:29:19 by atitus           ###   ########.fr       */
+/*   Updated: 2019/09/10 12:18:12 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ t_stack		*add_node_a(int argc, char **argv)
 		error();
 	while (val.i < argc)
 	{
-		val.new = (t_stack*)malloc(sizeof(t_stack));
+		val.new = (t_stack*)ft_memalloc(sizeof(t_stack));
 		val.new->val = ft_atoi(argv[val.i]);
 		val.new->next = NULL;
 		if (val.temp == NULL)
@@ -52,7 +52,7 @@ t_stack		*add_node(int argc, char **argv)
 		error();
 	while (val.i < argc)
 	{
-		val.new = (t_stack*)malloc(sizeof(t_stack));
+		val.new = (t_stack*)ft_memalloc(sizeof(t_stack));
 		val.new->val = ft_atoi(argv[val.i]);
 		val.new->next = NULL;
 		if (val.temp == NULL)
