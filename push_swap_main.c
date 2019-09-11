@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap_main.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
+/*   By: abdus-samad <abdus-samad@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/07 09:45:42 by atitus            #+#    #+#             */
-/*   Updated: 2019/09/11 16:00:55 by atitus           ###   ########.fr       */
+/*   Updated: 2019/09/11 11:42:19 by abdus-samad      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int		main(int argc, char **argv)
 	}
 		delete_list(&g_a);
 		delete_list(&g_b);
-		sleep(20);
+		//sleep(20);
 		return (0);
 	
 }
