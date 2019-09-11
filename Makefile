@@ -6,7 +6,7 @@
 #    By: atitus <atitus@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/08/26 15:40:20 by atitus            #+#    #+#              #
-#    Updated: 2019/09/11 13:38:51 by atitus           ###   ########.fr        #
+#    Updated: 2019/09/09 13:09:33 by atitus           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -73,8 +73,8 @@ $(NAME):
 	@gcc -c -g $(CFLAGS) $(SRC)
 	@ar rc $(NAME) $(SRCO)
 	@ranlib $(NAME)
-	@gcc checker_main.c push_swap.a Memd/libmemd.a libft/libft.a -Wall -Werror -Wextra -o checker
-	@gcc push_swap_main.c push_swap.a Memd/libmemd.a libft/libft.a -Wall -Werror -Wextra -o push_swap
+	@gcc checker_main.c push_swap.a libft/libft.a -Wall -Werror -Wextra -o checker
+	@gcc push_swap_main.c push_swap.a libft/libft.a -Wall -Werror -Wextra -o push_swap
 clean:
 	@/bin/rm -f $(SRCO)
 

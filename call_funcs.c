@@ -6,7 +6,7 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/09 09:37:46 by atitus            #+#    #+#             */
-/*   Updated: 2019/09/11 12:44:18 by atitus           ###   ########.fr       */
+/*   Updated: 2019/09/09 11:49:09 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ void	call_sa(t_stack *temp)
 void	call_sa_rra(t_stack *temp)
 {
 	sa(&temp);
-	ft_putendl("sa");
 	rra(&temp);
+	ft_putendl("sa");
 	ft_putendl("rra");
 }
 

@@ -6,7 +6,7 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/13 13:16:45 by atitus            #+#    #+#             */
-/*   Updated: 2019/09/11 13:25:55 by atitus           ###   ########.fr       */
+/*   Updated: 2019/09/11 15:51:53 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ int		find_median(t_stack *head)
 			ptr1 = ptr1->next;
 		}
 	}
-	
 	delete_list(&temp);
 	return (ptr1->val);
 }
@@ -100,7 +99,7 @@ int		find_q3(t_stack *head)
 		chunk.ptr1 = chunk.ptr1->next;
 		chunk.ptr2 = chunk.ptr2->next;
 		chunk.temp = chunk.temp->next;
-	} 
+	}
 	chunk.temp = NULL;
 	chunk.temp = clone(head);
 	if (chunk.temp != NULL)
@@ -121,7 +120,7 @@ int		find_q4(t_stack *head)
 	struct s_chunks chunk;
 
 	t_stack *hold;
-	hold= clone(head);
+	hold = clone(head);
 	chunk.temp = hold;
 	simple_sort(chunk.temp);
 	chunk.mark = find_median(chunk.temp);
@@ -143,6 +142,5 @@ int		find_q4(t_stack *head)
 		}
 	}
 	delete_list(&hold);
-
 	return (chunk.ptr1->val);
 }

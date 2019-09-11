@@ -6,7 +6,7 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/05 08:59:18 by atitus            #+#    #+#             */
-/*   Updated: 2019/09/10 12:20:55 by atitus           ###   ########.fr       */
+/*   Updated: 2019/09/09 13:27:56 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ t_stack		*clone(t_stack *list)
 
 	if (list == NULL)
 		return (NULL);
-	result = (t_stack*)ft_memalloc(sizeof(t_stack));
+	result = (t_stack*)malloc(sizeof(t_stack));
 	result->val = list->val;
 	result->next = clone(list->next);
 	return (result);
