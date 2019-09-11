@@ -6,7 +6,7 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/07 12:13:18 by atitus            #+#    #+#             */
-/*   Updated: 2019/09/10 07:50:34 by atitus           ###   ########.fr       */
+/*   Updated: 2019/09/11 13:27:05 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,8 @@ void		sort_5(t_stack *head)
 		call_rra2_pb(g_a);
 	else if (minimum == g_a->next->next->next->next->val)
 		call_rra_pb(g_a);
-	sort_4(g_a);
+		
+		sort_4(g_a);
 	pa(&g_a, &g_b, g_b->val);
 	ft_putendl("pa");
 }
@@ -72,7 +73,7 @@ void		sort_4(t_stack *head)
 		call_rra2_pb(g_a);
 	else if (minimum == g_a->next->next->next->val)
 		call_rra_pb(g_a);
-	sort_3(g_a);
+	sort_3(g_a);	
 	pa(&g_a, &g_b, g_b->val);
 	ft_putendl("pa");
 }

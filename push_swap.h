@@ -6,7 +6,7 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/10 14:02:56 by atitus            #+#    #+#             */
-/*   Updated: 2019/09/10 13:56:57 by atitus           ###   ########.fr       */
+/*   Updated: 2019/09/11 13:38:30 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 
 # include <stdio.h>
 # include <stdlib.h>
-
+# include "Memd/mem.h"
 typedef struct		s_stack
 {
 	int				val;

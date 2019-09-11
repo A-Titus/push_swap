@@ -6,7 +6,7 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/11 09:19:53 by atitus            #+#    #+#             */
-/*   Updated: 2019/09/10 12:29:28 by atitus           ###   ########.fr       */
+/*   Updated: 2019/09/11 13:49:10 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,9 +55,16 @@ void	pa(t_stack **a, t_stack **b, int val)
 	new_node->next = (*a);
 	(*a) = new_node;
 	if ((*b)->next)
+	{
 		delete_node(*b);
-	else
+	
+	}
+		
+	else{
+		free((*b));
 		*b = NULL;
+	}
+		
 }
 
 void	pb(t_stack **b, t_stack **a, int val)
@@ -70,6 +77,8 @@ void	pb(t_stack **b, t_stack **a, int val)
 	(*b) = new_node;
 	if ((*a)->next)
 		delete_node(*a);
-	else
+	else{
+		free((*a));
 		*a = NULL;
+	}
 }

@@ -6,7 +6,7 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/07 09:45:42 by atitus            #+#    #+#             */
-/*   Updated: 2019/09/10 13:54:41 by atitus           ###   ########.fr       */
+/*   Updated: 2019/09/11 15:07:12 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int		main(int argc, char **argv)
 	int		count;
 	char	**strings;
 	int i = 0;
-
+	
 	if (argc == 2)
 	{
 		strings = ft_strsplit(argv[1], ' ');
@@ -41,7 +41,7 @@ int		main(int argc, char **argv)
 	}
 	delete_list(&g_a);
 	delete_list(&g_b);
-	//sleep(30);
+	//sleep(10);
 		return (0);
 
 }

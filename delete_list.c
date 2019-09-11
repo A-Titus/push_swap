@@ -6,7 +6,7 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/16 09:56:33 by atitus            #+#    #+#             */
-/*   Updated: 2019/09/10 12:32:51 by atitus           ###   ########.fr       */
+/*   Updated: 2019/09/11 15:02:51 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,20 @@ void	delete_list(t_stack **head_ref)
 	t_stack	*next;
 
 	current = *head_ref;
-	while (current != NULL)
+	while (current)
 	{
 		next = current->next;
 		free(current);
 		current = next;
 	}
 	*head_ref = NULL;
+	/*t_stack	*next;
+	
+	while (*s)
+	{
+		next = (*s)->next;
+		free(*s);
+		*s = next;
+	}
+	*s = NULL;*/
 }
