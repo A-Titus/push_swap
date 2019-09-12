@@ -6,7 +6,7 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/10 14:02:56 by atitus            #+#    #+#             */
-/*   Updated: 2019/09/12 10:29:36 by atitus           ###   ########.fr       */
+/*   Updated: 2019/09/12 12:17:36 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -168,9 +168,8 @@ int					is_num(char *str);
 int					check_size(long n);
 long long			ft_atoll(char *str);
 void				delete_chucks(t_stack *temp, t_stack *hold);
-void				init_chunk(int mark, t_stack *ptr1, t_stack *ptr2, t_stack *temp);
 
-t_stack				*new_node(int val);
+t_stack				*create(int n);
 void				ft_push(t_stack **a, int val);
 int					ft_pop(t_stack **a);
 

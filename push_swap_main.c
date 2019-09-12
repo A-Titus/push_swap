@@ -6,7 +6,7 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/07 09:45:42 by atitus            #+#    #+#             */
-/*   Updated: 2019/09/12 12:12:39 by atitus           ###   ########.fr       */
+/*   Updated: 2019/09/12 12:24:21 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ int		main(int argc, char **argv)
 		{
 			exit(1);
 		}
+		if (!ft_atoi(argv[1]))
+			error();
 		push_swap_a(count, strings);
 	}
 	if (argc > 1)
