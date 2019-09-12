@@ -6,7 +6,7 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/13 13:16:45 by atitus            #+#    #+#             */
-/*   Updated: 2019/09/11 15:51:53 by atitus           ###   ########.fr       */
+/*   Updated: 2019/09/12 11:41:56 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,10 +85,9 @@ int		find_q2(t_stack *head)
 int		find_q3(t_stack *head)
 {
 	struct s_chunks chunk;
-	t_stack *hold;
 
-	hold = clone(head);
-	chunk.temp = hold;
+	chunk.hold = clone(head);
+	chunk.temp = chunk.hold;
 	simple_sort(chunk.temp);
 	chunk.mark = find_median(chunk.temp);
 	chunk.q3 = find_q4(chunk.temp);
@@ -103,15 +102,12 @@ int		find_q3(t_stack *head)
 	chunk.temp = NULL;
 	chunk.temp = clone(head);
 	if (chunk.temp != NULL)
-	{
 		while (chunk.ptr2->val != chunk.q3 && chunk.ptr2->next->val != chunk.q3)
 		{
 			chunk.ptr2 = chunk.ptr2->next->next;
 			chunk.ptr1 = chunk.ptr1->next;
 		}
-	}
-	delete_list(&hold);
-	delete_list(&chunk.temp);
+	delete_chucks(chunk.temp, chunk.hold);
 	return (chunk.ptr1->val);
 }
 
@@ -119,9 +115,8 @@ int		find_q4(t_stack *head)
 {
 	struct s_chunks chunk;
 
-	t_stack *hold;
-	hold = clone(head);
-	chunk.temp = hold;
+	chunk.hold = clone(head);
+	chunk.temp = chunk.hold;
 	simple_sort(chunk.temp);
 	chunk.mark = find_median(chunk.temp);
 	chunk.ptr1 = chunk.temp;
@@ -133,7 +128,7 @@ int		find_q4(t_stack *head)
 		chunk.temp = chunk.temp->next;
 	}
 	chunk.temp = NULL;
-	if (hold != NULL)
+	if (chunk.hold != NULL)
 	{
 		while (chunk.ptr2 != NULL && chunk.ptr2->next != NULL)
 		{
@@ -141,6 +136,6 @@ int		find_q4(t_stack *head)
 			chunk.ptr1 = chunk.ptr1->next;
 		}
 	}
-	delete_list(&hold);
+	delete_list(&chunk.hold);
 	return (chunk.ptr1->val);
 }

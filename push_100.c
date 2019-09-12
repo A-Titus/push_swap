@@ -6,7 +6,7 @@
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/03 11:43:46 by atitus            #+#    #+#             */
-/*   Updated: 2019/09/10 08:06:40 by atitus           ###   ########.fr       */
+/*   Updated: 2019/09/12 10:49:01 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void		push_q1(t_stack **head)
 		val.current = *head;
 		if (val.current->val <= val.q1)
 		{
-			pb(&g_b, &g_a, (g_a)->val);
+			ft_push(&g_b, ft_pop(&g_a));
 			ft_putendl("pb");
 		}
 		else
@@ -53,7 +53,7 @@ void		push_q2(t_stack **head)
 		val.current = *head;
 		if (val.current->val > val.q1 && val.current->val <= val.q2)
 		{
-			pb(&g_b, &g_a, (g_a)->val);
+			ft_push(&g_b, ft_pop(&g_a));
 			ft_putendl("pb");
 		}
 		else
@@ -80,7 +80,7 @@ void		push_q3(t_stack **head)
 		val.current = *head;
 		if (val.current->val > val.median && val.current->val <= val.q3)
 		{
-			pb(&g_b, &g_a, (g_a)->val);
+			ft_push(&g_b, ft_pop(&g_a));
 			ft_putendl("pb");
 		}
 		else
@@ -107,7 +107,7 @@ void		push_q4(t_stack **head)
 		val.current = *head;
 		if (val.current->val > val.q3 && val.current->val < val.q4)
 		{
-			pb(&g_b, &g_a, (g_a)->val);
+			ft_push(&g_b, ft_pop(&g_a));
 			ft_putendl("pb");
 		}
 		else
@@ -133,7 +133,7 @@ void		push_above_q4(t_stack **head)
 		val.current = *head;
 		if (val.current->val >= val.q4)
 		{
-			pb(&g_b, &g_a, (g_a)->val);
+			ft_push(&g_b, ft_pop(&g_a));
 			ft_putendl("pb");
 		}
 		else

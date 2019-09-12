@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   checker_main.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abdus-samad <abdus-samad@student.42.fr>    +#+  +:+       +#+        */
+/*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/07 09:49:59 by atitus            #+#    #+#             */
-/*   Updated: 2019/09/11 12:16:00 by abdus-samad      ###   ########.fr       */
+/*   Updated: 2019/09/12 12:08:27 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ int		main(int argc, char **argv)
 	int		counter;
 	char	**str;
 
-	
 	str = NULL;
 	if (argc == 2)
 	{
@@ -27,9 +26,11 @@ int		main(int argc, char **argv)
 		{
 			exit(1);
 		}
-		if(!valid(counter, str))
+		if (!ft_atoi(argv[1]))
 			error();
 		checker_a(counter, str);
+	
+	
 	}
 	if (argc > 1)
 	{

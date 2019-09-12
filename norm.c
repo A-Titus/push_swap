@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   call_funcs4.c                                      :+:      :+:    :+:   */
+/*   norm.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/09 12:22:05 by atitus            #+#    #+#             */
-/*   Updated: 2019/09/12 10:52:11 by atitus           ###   ########.fr       */
+/*   Created: 2019/09/12 08:20:35 by atitus            #+#    #+#             */
+/*   Updated: 2019/09/12 10:02:56 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	call_rrb(t_stack **b)
+void		delete_chucks(t_stack *temp, t_stack *hold)
 {
-	rrb(b);
-	ft_putendl("rrb");
+	delete_list(&hold);
+	delete_list(&temp);
 }
 
-void	call_rb(t_stack **b)
+void		init_chunk(int mark, t_stack *ptr1, t_stack *ptr2, t_stack *temp)
 {
-	rb(b, 1);
-	ft_putendl("rb");
-}
-
-void	call_pa_b(t_stack **g_b)
-{
-	ft_push(&g_a, ft_pop(g_b));
-	ft_putendl("pa");
+	mark = find_median(temp);
+	ptr1 = temp;
+	ptr2 = temp;
 }

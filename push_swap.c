@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abdus-samad <abdus-samad@student.42.fr>    +#+  +:+       +#+        */
+/*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/07 12:13:18 by atitus            #+#    #+#             */
-/*   Updated: 2019/09/11 10:52:13 by abdus-samad      ###   ########.fr       */
+/*   Updated: 2019/09/12 10:49:01 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ void		sort_5(t_stack *head)
 	else if (minimum == g_a->next->next->next->next->val)
 		call_rra_pb(g_a);
 	sort_4(g_a);
-	pa(&g_a, &g_b, g_b->val);
+	ft_push(&g_a, ft_pop(&g_b));
 	ft_putendl("pa");
 }
 
@@ -73,7 +73,7 @@ void		sort_4(t_stack *head)
 	else if (minimum == g_a->next->next->next->val)
 		call_rra_pb(g_a);
 	sort_3(g_a);
-	pa(&g_a, &g_b, g_b->val);
+	ft_push(&g_a, ft_pop(&g_b));
 	ft_putendl("pa");
 }
 
@@ -93,7 +93,7 @@ void		push_median(t_stack **head)
 		data.current = *head;
 		if (data.current->val > data.q2 && data.current->val <= data.median)
 		{
-			pb(&g_b, &g_a, (g_a)->val);
+			ft_push(&g_b, ft_pop(&g_a));
 			ft_putendl("pb");
 		}
 		else

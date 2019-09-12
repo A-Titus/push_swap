@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   operations1.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abdus-samad <abdus-samad@student.42.fr>    +#+  +:+       +#+        */
+/*   By: atitus <atitus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/11 09:19:53 by atitus            #+#    #+#             */
-/*   Updated: 2019/09/11 10:44:34 by abdus-samad      ###   ########.fr       */
+/*   Updated: 2019/09/12 11:13:27 by atitus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,37 +46,83 @@ void	ss(t_stack **a, t_stack **b)
 	sb(b);
 }
 
-void	pa(t_stack **a, t_stack **b, int val)
+/*create note
+t_stack 	*new_node(int val)
 {
-	t_stack *new_node;
+	t_stack *node;
 
-	new_node = (t_stack*)malloc(sizeof(t_stack));
-	new_node->val = val;
-	new_node->next = (*a);
-	(*a) = new_node;
-	if ((*b)->next)
-		delete_node(*b);
-	else
-	{
-		free((*b));
-		*b = NULL;
-	}
-	
+	node = (t_stack*)ft_memalloc(sizeof(t_stack) * 1);
+	node->val = val;
+	node->next = NULL;
+	return (node);
 }
 
-void	pb(t_stack **b, t_stack **a, int val)
+void		ft_push(t_stack **a, int val)
 {
-	t_stack *new_node;
+	t_stack *to_push;
 
-	new_node = (t_stack*)malloc(sizeof(t_stack));
-	new_node->val = val;
-	new_node->next = (*b);
-	(*b) = new_node;
-	if ((*a)->next)
-		delete_node(*a);
-	else
-	{
-		free((*a));
-		*a = NULL;
-	}
+	to_push = new_node(val);
+
+	to_push->next = (*a);
+	(*a) = to_push;
 }
+
+void	ft_push(t_stack **s, int n)
+{
+	t_stack	*new;
+	t_stack	*p;
+
+	p = *s;
+	new = new_node(n);
+	*s = new;
+	new->next = p;
+}
+
+int		ft_pop(t_stack **stack)
+{
+	int ret;
+	t_stack *temp;
+
+	ret = (*stack)->val;
+	temp = (*stack);
+	(*stack) = (*stack)->next;
+	free(temp);
+	return (ret);
+}*/
+
+t_stack	*create(int n)
+{
+	t_stack	*ret;
+
+	ret = malloc(sizeof(t_stack));
+	ret->val = n;
+	ret->next = NULL;
+	return (ret);
+}
+
+void	ft_push(t_stack **s, int n)
+{
+	t_stack	*new;
+	t_stack	*p;
+
+	p = *s;
+	new = create(n);
+	*s = new;
+	new->next = p;
+}
+
+int		ft_pop(t_stack **s)
+{
+	t_stack	*p;
+	int		n;
+
+	if (!*s)
+		exit(-1);
+	n = (*s)->val;
+	p = *s;
+	*s = (*s)->next;
+	free(p);
+	return (n);
+}
+
+
